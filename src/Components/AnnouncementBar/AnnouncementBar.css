@@ -1,14 +1,1333 @@
-.AnnouncementBar1{
-    border: 1px solid red;
-    padding: 8px;
-    padding-left: 55px;
+.AnnouncementBar {
     background-color: black;
+    display: flex;
+    gap: 200px;
+    width: 100%;
+}
+
+.first {
+    padding: 5px;
+    padding-left: 25px;
+    display: flex;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.second {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.strong {
+    color: white;
+}
+
+.swiper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-wrapper {
+    display: flex;
+    padding-left: 170px;
+    font-weight: 400;
+}
+
+.swiper-button-next::after {
+
+    color: white;
+    --swiper-navigation-size: 12px;
+
+}
+
+.swiper-button-prev::after {
+
+    color: white;
+    --swiper-navigation-size: 12px;
+}
+
+.third {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.NavigationBar {
+    padding: 25px;
+    display: flex;
+    gap: 150px;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.span5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    gap: 50px;
+    padding-left: 25px;
+    font-size: 15px;
+}
+
+.combospan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.arrow {
+    margin-top: -6px;
+    cursor: pointer;
+}
+
+.span6 {
+    display: flex;
+    padding: 10px;
+
+}
+
+.span7 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.search {
+    display: flex;
+    gap: 15px;
+}
+
+.cart {
+    display: flex;
+    gap: 15px;
+}
+
+.account {
+    margin-top: -3px;
+}
+
+.cart1 {
+    margin-top: -3px;
+}
+
+.zero {
+    display: flex;
+    gap: 5px;
+}
+
+.zero1 {
+    margin-top: -3px;
+}
+
+.counter {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.select {
+    padding: 10px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+}
+
+.flages {
+    color: black;
+}
+
+.slider {
+    height: 600px;
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/hero_slide_1.jpg?v=1620067690&width=1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.slider:hover {
+    cursor: pointer;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/Slide___secondary.jpg?v=1643325390&width=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.active {
+    height: 600px;
+}
+
+.active2 {
+    height: 600px;
+}
+
+.button1 {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.section1 {
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.image1 {
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-one.jpg?v=1643320722&width=500");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 110px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: transform .8s;
+}
+
+.image1:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.image2 {
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-three.jpg?v=1643320740&width=500');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 110px;
+    padding-bottom: 75px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .8s;
+}
+
+.image2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.image3 {
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-two.jpg?v=1643320766&width=500");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 110px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .8s;
+
+}
+
+.image3:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.newlook {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.image4 {
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_825.jpg?v=1620058041&width=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    width: 300px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.button2 {
+    border: none;
+    outline: none;
+    padding: 7px;
+    color: white;
+    background-color: black;
+}
+
+.image5 {
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_722.jpg?v=1620058276&width=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button3 {
+    border: none;
+    outline: none;
+    padding: 7px;
+    background-color: black;
+    color: white;
+}
+
+.image6 {
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1585.jpg?v=1620058051&width=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button4 {
+    border: none;
+    outline: none;
+    padding: 7px;
+    color: white;
+    background-color: black;
+}
+
+.image7 {
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_793.jpg?v=1620058057&width=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button5 {
+    border: none;
+    outline: none;
+    padding: 7px;
+    background-color: black;
+    color: white;
+}
+
+.new-looks-carousel-area {
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-card {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    margin-left: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* .carousel-card:hover .card-image{
+    opacity: 0.3;
+} */
+
+.carousel-card:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 16px 32px;
+}
+
+
+.card-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.carts-div {
+    width: 100%;
+    height: 550px;
     display: flex;
 }
 
-.first{
-    border: 1px solid red;
-    padding: 5px;
+.carousel-card-text-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 4px;
+}
+
+.carousel-cart-size-area {
+    display: flex;
+    gap: 4px;
+}
+
+.apispan {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.view {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewbutton {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.section2 {
+    height: 800px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+}
+
+.section2first {
+    height: 800px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.section2div1 {
+    height: 800px;
+    width: 100%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash___vanessa-serpas-U0m4t8tD8Sk-unsplashjpg.jpg?v=1629222503&width=700');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: transform 1.9s;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section2div1:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.justin {
+    font-weight: bold;
+
+}
+
+.collection {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.shopbutton {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+}
+
+.section2second {
+    height: 800px;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.section2div2 {
+    height: 800px;
+    width: 100%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash__jonathan-borba-XJt51hAa3z8-unsplash.jpg?v=1629222523&width=700');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.9s;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section2div2:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.dresses {
+    font-weight: bold;
+}
+
+.perfect-dress {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.shopbutton1 {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+}
+
+.shopbycollection {
+    height: 90px;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+}
+
+.section3 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding-left: 40px;
+    gap: 20px;
+}
+
+.section3div {
+    height: 500px;
+    width: 23%;
+}
+
+.section3div1 {
+    height: 440px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.section3div2 {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4 {
+    height: 600px;
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/image__with__text-overlay.jpg?v=1643322581&width=1800");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.shopall {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.inspiredlook {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+}
+
+.section5 {
+    height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section5div1 {
+    height: 650px;
+    width: 550px;
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1605.jpg?v=1620058321&width=1400");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section5div2 {
+    height: 650px;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div2first {
+    height: 230px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.div2firstleft {
+    height: 230px;
+    width: 25%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1605.jpg?v=1620058321&width=1400');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div2firstright {
+    height: 230px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+}
+
+.selectoption {
+    border: 1px solid black;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+}
+
+.details {
+    border: 1px solid #DDDDDD;
+    color: black;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.div2second {
+    height: 230px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.div2secondleft {
+    height: 230px;
+    width: 25%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1636.jpg?v=1693425244&width=300');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div2secondright {
+    height: 230px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+}
+
+.selectoption1 {
+    border: 1px solid black;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+}
+
+.details1 {
+    border: 1px solid #DDDDDD;
+    color: black;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.bestselling {
+    padding-top: 50px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+}
+
+.section6 {
+    margin-top: 40px;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #000000;
+}
+
+.section6first {
+    height: 120px;
+    width: 30%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #000000;
+}
+
+.defaultspan {
+    height: 60px;
+    width: 1px;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.section7 {
+    margin-top: 70px;
+    height: 700px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+}
+
+.section7first {
+    height: 650px;
+    width: 35%;
+    overflow: hidden;
+}
+
+.section7div1 {
+    height: 650px;
+    width: 100%;
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_15_fb6781a6-4117-4774-bc35-8fd80dfec347.jpg?v=1620058328&width=1000");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 1.9s;
+}
+
+.section7div1:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.section7second {
+    height: 650px;
+    width: 35%;
+    margin-left: -110px;
+    margin-top: -40px;
+    overflow: hidden;
+}
+
+.section7div2 {
+    height: 650px;
+    width: 100%;
+    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_13a_7dde66a4-0635-4eec-83ff-8bd6b7d63ce4.jpg?v=1620058328&width=1000");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 1.9s;
+    overflow: hidden;
+}
+
+.section7div2:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.section7div3 {
+    height: 250px;
+    width: 28%;
+    margin-left: 40px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.explore {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.section8 {
+    margin-top: 20px;
+    height: 150px;
+    width: 100%;
+    padding: 40px;
     display: flex;
     gap: 20px;
+}
+
+.section8div {
+    height: 100px;
+    width: 18%;
+}
+
+
+.section9 {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    padding: 40px;
+    gap: 50px;
+    background-color: #000000;
+}
+
+.section9div1 {
+    height: 120px;
+    width: 49%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+
+}
+
+.section9div2 {
+    height: 120px;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.section9span1 {
+    display: flex;
+    height: fit-content;
+}
+
+.input1 {
+    width: 510px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    background-color: #000000;
+    color: white;
+}
+
+.input1::placeholder {
+    color: white;
+}
+
+.input2 {
+    width: 60px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    background-color: #000000;
+    color: white;
+}
+
+
+.section10 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-bottom: 5px;
+    gap: 10px;
+}
+
+.section10div1 {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.section10div2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.section10span1 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    gap: 3px;
+}
+
+.section10span2 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    gap: 3px;
+}
+
+.section10span3 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    gap: 3px;
+}
+
+.section10span4 {
+    width: fit-content;
+    padding-top: 30px;
+}
+
+.section10span5 {
+    list-style: none;
+}
+
+.section10rightspan {
+    display: flex;
+    flex-direction: column;
+    margin-left: 410px;
+    gap: 25px;
+}
+
+.section10rightspan1 {
+    width: fit-content;
+    display: flex;
+    margin-left: 110px;
+}
+
+.section10rightspan2 {
+    display: flex;
+    gap: 10px;
+}
+
+.section10rightspan3 {
+    width: fit-content;
+    padding: 20px;
+    padding-top: 40px;
+    padding-right: 0px;
+}
+
+.arrowbutton {
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+@media screen and (max-device-width:1270px) and (min-device-width:769px){
+    .AnnouncementBar{
+        min-width: 100%;
+        gap: 120px;
+    }
+
+    .NavigationBar{
+        gap: 80px;
+    }
+
+    .strong{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-device-width:912px) and (min-device-width:500px) {
+    .first {
+        display: none;
+    }
+
+    .second {
+        width: 100%;
+    }
+
+    .third {
+        display: none;
+    }
+
+    .AnnouncementBar {
+        padding: 20px;
+    }
+
+    .strong {
+        margin-left: 80px;
+    }
+
+    .span5 {
+        display: none;
+    }
+
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section5 {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 30px;
+    }
+
+    .section5div1 {
+        width: 90%;
+    }
+
+    .section5div2 {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 250px;
+        gap: 5px;
+    }
+
+    .div2firstleft {
+        width: 40%;
+    }
+
+    .div2secondleft {
+        width: 40%;
+    }
+
+    .section7 {
+        display: flex;
+        flex-wrap: wrap;
+        height: min-content;
+    }
+
+    .section7first {
+        width: 50%;
+        margin-left: 60px;
+    }
+
+    .section7second {
+        width: 50%;
+    }
+
+    .section7div3 {
+        margin-left: 250px;
+    }
+
+    .section10div2 {
+        display: none
+    }
+
+    .sectino10div1 {
+        display: flex;
+    }
+
+    .section10span1 {
+        width: 25%;
+    }
+
+    .section10span2 {
+        width: 25%;
+    }
+
+    .section10span3 {
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width:430px) {
+    .first {
+        display: none;
+    }
+
+    .second {
+        width: 90%;
+    }
+
+    .third {
+        display: none;
+    }
+
+    .AnnouncementBar {
+        padding: 20px;
+        padding-left: 50px;
+        width: 100%;
+    }
+
+    .strong {
+        font-size: 10px;
+        margin-left: -80px;
+    }
+
+    .span5 {
+        display: none;
+    }
+
+    .NavigationBar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .span7 {
+        padding-right: 120px;
+    }
+
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .slider {
+        background-size: contain;
+        height: 200px;
+        font-size: 9px;
+    }
+
+    .carousel-card {
+        margin-left: 70px;
+    }
+
+    .section2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: fit-content;
+        gap: 5px;
+
+    }
+
+    .section2first {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .section2div1 {
+        background-size: contain;
+        height: 400px;
+    }
+
+    .justin {
+        font-size: large;
+    }
+
+    .collection {
+        font-size: small;
+    }
+
+    .section2second {
+        width: 100%;
+        height: fit-content;
+    }
+
+
+    .section2div2 {
+        background-size: contain;
+        height: 400px;
+    }
+
+    .section3 {
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .section3div {
+        width: 90%;
+    }
+
+    .section4 {
+        background-size: cover;
+        padding-left: 40px;
+        padding: 50px;
+        height: 400px;
+    }
+
+    .section5 {
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        gap: 10px;
+    }
+
+    .section5div2 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: fit-content;
+        gap: 5px;
+    }
+
+    .div2firstleft {
+        width: 40%;
+    }
+
+    .div2secondleft {
+        width: 40%;
+    }
+
+    .section6{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+   
+    .section6first{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .defaultspan{
+        display: none;
+    }
+
+    .section7 {
+        display: flex;
+        flex-wrap: wrap;
+        height: min-content;
+        width: 420px;
+    }
+
+    .section7first {
+        width: 50%;
+    }
+
+    .section7second {
+        width: 50%;
+    }
+
+    .section8{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .section8div{
+        width: fit-content;
+    }
+
+    .section9div1{
+        display: none;
+    }
+
+    .section9div2{
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .sectino10div1 {
+        display: flex;
+    }
+
+    .section10span1 {
+        width: 20%;
+    }
+
+    .section10span2 {
+        width: 20%;
+    }
+
+    .section10span3 {
+        width: 20%;
+    }
+
+    .section10span4{
+        display: none;
+    }
+
+    .section10rightspan{
+        margin-left: 0px;
+    }
+
+    .section7div3{
+        width: 80%;
+
+    }
 }

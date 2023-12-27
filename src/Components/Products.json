@@ -1,0 +1,65 @@
+[
+    {
+        "shop":"SHOP",
+        "blog":"BLOG",
+        "contact":"CONTACT",
+        "about":"ABOUT",
+        "images":[
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1561.jpg?v=1620058340&width=1200",
+                "name":"Dresses",
+                "title":"21 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_722.jpg?v=1620058276&width=1200",
+                "name":"Playsuits & Jumpsuits",
+                "title":"3 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_13_ee8be274-fcd3-4f82-9468-8fcccae691b6.jpg?v=1620058328&width=1200",
+                "name":"Tops",
+                "title":"12 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_878_e657551b-128b-467b-9fb5-e0c11c83140e.jpg?v=1620058335&width=1200",
+                "name":"Sale",
+                "title":"3 Items"
+            }
+        ],
+        "freecontain":[
+            {
+                "freeshipping":"FREE SHIPPING",
+                "freeshippingdata":"Spend $100 and receive Free 2 day shipping."
+            },
+            {
+                "freeshipping":"FLEXIBLE PAYMENTS",
+                "freeshippingdata":"Spread your purchase with 4 easy payments"
+            },
+            {
+                "freeshipping":"FREE RETURNS",
+                "freeshippingdata":"Buy in confidence with no-hassle returns"
+            }
+        ],
+        "images1":[
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_vogue.jpg?v=1620767454&width=800"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_allure.jpg?v=1620767389&width=800"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_cosmopolitan.jpg?v=1620767402&width=800"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_elle.jpg?v=1620767416&width=800"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_instyle.jpg?v=1620767427&width=800"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_marie_claire.jpg?v=1620767442&width=800"
+            }
+        ]
+        
+    }
+]
