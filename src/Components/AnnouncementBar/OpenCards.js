@@ -19,7 +19,7 @@ import Navbar from './Navbar'
 import '../AnnouncementBar/OpenCards.css'
 import '../AnnouncementBar/AnnouncementBar.css'
 import Countdown from 'react-countdown'
-import { Icon } from '@mui/material'
+import { Icon, TextField } from '@mui/material'
 import axios from 'axios'
 import Modal from '../AnnouncementBar/Modal.js'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -51,6 +51,11 @@ export default function OpenCards() {
     const [totaladd, setTotalAdd] = useState()
 
     const [match, setMatch] = useState(0)
+
+    const [detail1,setDetail1] = useState()
+    const [detail2,setDetail2] = useState()
+    const [detail3,setDetail3] = useState()
+    const [detail4,setDetail4] = useState()
 
 
     const handleClose = () => {
@@ -185,6 +190,34 @@ export default function OpenCards() {
     const CheckOut = ()=>{
         navigate("/paymentgetway")
     }
+
+    const Detail1 = ()=>{
+        setDetail1(true)
+        setDetail2(false)
+        setDetail3(false)
+        setDetail4(false)
+    }
+
+    const Detail2 =()=>{
+        setDetail2(true)
+        setDetail1(false)
+        setDetail3(false)
+        setDetail4(false)
+    }
+
+    const Detail3 = ()=>{
+        setDetail3(true)
+        setDetail1(false)
+        setDetail2(false)
+        setDetail4(false)
+    }
+
+    const Detail4 = ()=>{
+        setDetail4(true)
+        setDetail1(false)
+        setDetail2(false)
+        setDetail3(false)
+    }
     return <>
 
         <TopAnnouncementBar />
@@ -293,13 +326,14 @@ export default function OpenCards() {
                 </span>
 
                 <span className='bigspan8'>
-                    <button className='detailsbutton'><u>Details</u></button>
-                    <button className='returns'><u>Returns</u></button>
-                    <button className='shipping'><u>Shipping</u></button>
-                    <button className='question'><u>Ask a question</u></button>
+                    <button className='detailsbutton' onClick={()=>Detail1()}><u>Details</u></button>
+                    <button className='returns' onClick={()=>Detail2()}><u>Returns</u></button>
+                    <button className='shipping' onClick={()=>Detail3()}><u>Shipping</u></button>
+                    <button className='question' onClick={()=>Detail4()}><u>Ask a question</u></button>
                 </span>
 
-                <span className='bigspan9'>
+                {detail1 == true ? <>
+                    <span className='bigspan9'>
                     <span style={{ fontWeight: 'bold' }}>Details</span>
                     <span style={{ marginLeft: "10px" }}>
                         <li>Collared shirt</li>
@@ -326,6 +360,39 @@ export default function OpenCards() {
                     All product in this store can be purchased from <u style={{ fontWeight: "bold" }}>Elle and Andi</u>
                 </span>
 
+                </> : null}
+
+
+                {detail2 == true ? <>
+                    <div className='returnsdetail'>
+                    <span><b>Free</b> Returns on all items if returned unworn in original packing including all labels.</span>
+                    <span>We regret that we can not accept returns on items that have been used.</span>
+                    <span>If you are unhappy with your purchase or would like to return item, contact us and we will arrange pickup at our cost.</span>
+                 </div> 
+                </> : null}
+
+                {detail3 == true ? <>
+                    <div className='shippingdetail'>
+                    <span>We offer free 3 day shipping on all products.</span>
+                    <span>Next day shipping is available at an additional cost and may be calculated at checkout.</span>
+                </div>
+
+                </> : null}
+
+
+                {detail4 == true ? <>
+                    <div className='askquestion'>
+                    <span>Add text which will be shown in tabs across all product pages</span>
+
+                    <TextField   label="Name"  />
+                    <TextField   label="Email"  />
+                    <TextField   label="Phone Number"   />
+                    <TextField label="Message"/>
+
+                    <button className='detailsendbutton'>Send</button>
+
+                </div>
+                </> : null}
                 <span className='bigspan13'>
                     <span style={{ fontWeight: "bold" }}>Pare it with</span>
                             <div className='threeimagediv'>

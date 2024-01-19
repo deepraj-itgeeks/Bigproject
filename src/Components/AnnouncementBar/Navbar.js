@@ -39,6 +39,10 @@ export default function Navbar() {
     const Account = ()=>{
         navigate('/account')
     }
+
+    const Home = ()=>{
+        navigate('/')
+    }
     return <>
         <div className='NavigationBar'>
             <span className='span5'>
@@ -57,7 +61,7 @@ export default function Navbar() {
                 })}
             </span>
 
-            <span className='span6'>
+            <span className='span6' onClick={()=>{Home()}} style={{cursor:"pointer"}}>
                 <img src="//fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=1200" alt="" srcset="//fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=200 200w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=300 300w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=400 400w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=500 500w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=600 600w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=700 700w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=800 800w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=1000 1000w, //fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo.jpg?v=1620077064&amp;width=1200 1200w" width="230px" height="20px" loading="eager" fetchpriority="high" sizes="(min-width: 500px) 2000px,
                  (min-width: 768px) and (max-width: 1600px) 1200px,
                  (max-width: 767px) 100vw, 900px"/>
