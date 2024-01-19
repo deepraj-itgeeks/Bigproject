@@ -1,0 +1,302 @@
+.blogdiv1{
+    width: 100%;
+    height: 500px;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/image__with__text-overlay.jpg?v=1643322581&width=1800');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.blogdiv2{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    padding:50px;
+    padding-top: 70px;
+}
+
+.blogdiv3{
+    height: fit-content;
+    width: 100%;
+    padding-left: 50px;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.blogdiv3left{
+    height: fit-content;
+    width: 74%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.blogdivleft1{
+    height: 272px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogdivleft1innerleft{
+    height: 100%;
+    width: 46%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/articles/fashionopolism-shopify-theme-009.jpg?v=1591824419&width=1200');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blogdivleft1innerright{
+    height: 100%;
+    width: 52%;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.blogdivleft2{
+    height: 272px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogdivleft2innerleft{
+    height: 100%;
+    width: 46%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/articles/blog-image1.jpg?v=1464117747&width=1200');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blogdivleft2innerright{
+    height: 100%;
+    width: 52%;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 15px;
+}
+
+.blogdivleft3{
+    height: 272px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogdivleft3innerleft{
+    height: 100%;
+    width: 46%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/articles/blog-image2.jpg?v=1464117744&width=1200');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blogdivleft3innerright{
+    height: 100%;
+    width: 52%;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 25px;
+}
+
+.blogdiv3right{
+    height: fit-content;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.blogdiv3rightfirst{
+    width: 100%;
+    height: 220px;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 3px;
+}
+
+.blogdiv3rightsecond{
+    width: 100%;
+    height: 490px;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blogdiv3rightsecondinner{
+    height: 325px;
+}
+
+.charlotte{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.shopproductbutton{
+    background-color: black;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.blogdiv3rightthird{
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #DDDDDD;
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 5px;
+    align-items: center;
+}
+
+.address{
+    padding: 10px;
+    border: 1px solid #DDDDDD;
+}
+
+.joinbutton{
+    color: white;
+    background-color: black;
+    padding: 7px;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.blogdiv4{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1250px) and (min-width:550px) {
+    .blogdiv3{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .blogdiv3left{
+        width: 100%;
+    }
+
+    .blogdiv3right{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:430px) and (min-width:320px){
+  
+    .blogdiv3{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .blogdiv3left{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .blogdivleft1{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdivleft1innerleft{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .blogdivleft1innerright{
+        width: 100%;
+    }
+
+
+    .blogdivleft2{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdivleft2innerleft{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .blogdivleft2innerright{
+        width: 100%;
+    }
+
+
+    .blogdivleft3{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdivleft3innerleft{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .blogdivleft3innerright{
+        width: 100%;
+    }
+
+    .blogdiv3right{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .blogdiv3rightsecond{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdiv3rightsecondinner{
+        margin-left: 100px;
+    }
+
+}

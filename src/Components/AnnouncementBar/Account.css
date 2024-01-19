@@ -1,0 +1,316 @@
+.accountdiv1{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.accountdivinner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login{
+    padding: 30px;
+    padding-bottom: 40px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.emailspan{
+    display: flex;
+    flex-direction: column;
+}
+
+.emaillable{
+    font-weight: bold;
+}
+
+.Useremail{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+.passwordspan{
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordspan1{
+    display: flex;
+    gap: 165px;
+}
+
+.passwordlable{
+    font-weight: bold;
+}
+
+.Userpassword{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+.signin{
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    width: 400px;
+}
+
+.orspan{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.orleft{
+    width: 180px;
+    background-color: #dddddd;
+    padding: 0.5px;
+}
+
+.orright{
+    width: 180px;
+    background-color: #dddddd;
+    padding: 0.5px;
+}
+
+.orinner{
+    color: #dddddd;
+}
+
+.create{
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: #dddddd;
+    color: black;
+    width: 400px;
+}
+
+.modalthirddiv1{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.modalthirddiv2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-left: 60px;
+}
+
+.modalthirdspan1{
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+
+.modalthirdsubmitbutton{
+    width: 15%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+#realmodaldiv2{
+    width: 65%;
+    left: 230px;
+    height: "50%",
+}
+
+.checkpassword{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+#realmodal4div2{
+    width: 65%;
+    left: 230px;
+    height: "50%",
+}
+
+.modalfourdiv1{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.modalfourdiv2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    gap: 10px;
+}
+
+.modalfourspan1{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.modalfourspan2{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalfourlable1{
+    font-weight: bold;
+}
+
+.firstinput{
+    padding: 12px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+
+.modalfourspan3{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalfourlable2{
+    font-weight: bold;
+}
+
+.lastinput{
+    padding: 12px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+
+.modalfourspan4{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalfourlable3{
+    font-weight: bold;
+}
+
+.emailinput{
+    padding: 12px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+
+.modalfourspan5{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalfourlable4{
+    font-weight: bold;
+}
+
+.passwordinput{
+    padding: 12px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+
+.Createbutton{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: fit-content;
+}
+
+@media screen and (max-width:1024px) and (min-width:550px){
+    #realmodaldiv2{
+        width: 100%;
+        left: 0px;
+        height: 30%;
+    }
+
+    #realmodal4div2{
+        width: 100%;
+        left: 0px;
+        height: 20%,
+    }
+}
+
+@media screen and (max-width:550px) and (min-width:320px){
+    #realmodaldiv2{
+        width: 100%;
+        left: 0px;
+        height: 50%;
+    }
+
+    #realmodal4div2{
+        width: 100%;
+        left: 0px;
+        height: 20%,
+    }
+
+    .modalthirddiv2{
+        padding-left: 10px;
+        padding: 20px;
+    }
+
+    .modalthirdsubmitbutton{
+        width: 20%;
+    }
+
+    .signin{
+        width: 100%;
+    }
+
+    .create{
+        width: 100%;
+    }
+    
+    .passwordspan1{
+        display: flex;
+        gap: 100px;
+    }
+
+    .emailspan{
+        width: 100%;
+    }
+
+    .Useremail{
+        width: 100%;
+    }
+
+    .passwordspan{
+        width: 100%;
+    }
+
+    .Userpassword{
+        width: 100%;
+    }
+
+    .orleft{
+        width: 100%;
+    }
+
+
+}

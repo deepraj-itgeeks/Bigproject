@@ -59,6 +59,155 @@
             {
                 "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/logo_list_marie_claire.jpg?v=1620767442&width=800"
             }
+        ],
+        "image2":[
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1407.jpg?v=1620058296&width=1200",
+                "item1":"Best Selling",
+                "item2":"10 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1060.jpg?v=1620058237&width=1200",
+                "item1":"Bottoms",
+                "item2":"10 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1561.jpg?v=1620058340&width=1200",
+                "item1":"Dresses",
+                "item2":"21 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_1733.jpg?v=1620057985&width=1200",
+                "item1":"New Arrivals",
+                "item2":"43 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_853_bd32787b-b641-4882-af55-79e03f937482.jpg?v=1620057996&width=1200",
+                "item1":"Our Favorites",
+                "item2":"12 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_722.jpg?v=1620058276&width=1200",
+                "item1":"Playsuites & Jumpsuites",
+                "item2":"3 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_878_e657551b-128b-467b-9fb5-e0c11c83140e.jpg?v=1620058335&width=1200",
+                "item1":"Sale",
+                "item2":"3 Items"
+            },
+            {
+                "image":"https://fashionopolism-secret-sale.myshopify.com/cdn/shop/products/EmptyName_13_ee8be274-fcd3-4f82-9468-8fcccae691b6.jpg?v=1620058328&width=1200",
+                "item1":"Tops",
+                "item2":"12 Items"
+            }
+        ],
+        "data":[
+            {
+                "color":"black",
+                "name":"Black",
+                "title":"8"
+            },
+            {
+                "color":"blue",
+                "name":"Blue",
+                "title":"5"
+            },
+            {
+                "color":"khaki",
+                "name":"Khaki",
+                "title":"1"
+            },
+            {
+                "color":"mustard",
+                "name":"Mustard",
+                "title":"1"
+            },
+            {
+                "color":"olive",
+                "name":"Olive",
+                "title":"1"
+            },
+            {
+                "color":"pink",
+                "name":"Plink",
+                "title":"3"
+            },
+            {
+                "color":"rose",
+                "name":"Rose",
+                "title":"1"
+            },
+            {
+                "color":"sage",
+                "name":"Sage",
+                "title":"4"
+            },
+            {
+                "color":"white",
+                "name":"white",
+                "title":"12"
+            },
+            {
+                "color":"yellow",
+                "name":"Yellow",
+                "title":"2"
+            }
+        ],
+        
+        "data1":[
+            {
+                "size":"XS",
+                "title":"0"
+            },
+            {
+                "size":"S",
+                "title":"1"
+            },
+            {
+                "size":"M",
+                "title":"1"
+            },
+            {
+                "size":"L",
+                "title":"1"
+            },
+            {
+                "size":"XL",
+                "title":"0"
+            },
+            {
+                "size":"6",
+                "title":"0"
+            },
+            {
+                "size":"8",
+                "title":"0"
+            },
+            {
+                "size":"10",
+                "title":"0"
+            },
+            {
+                "size":"12",
+                "title":"0"
+            },
+            {
+                "size":"14",
+                "title":"0"
+            },
+            {
+                "size":"16",
+                "title":"0"
+            },
+            {
+                "size":"M / L",
+                "title":"0"
+            },
+            {
+                "size":"S / M",
+                "title":"0"
+            }
         ]
         
     }

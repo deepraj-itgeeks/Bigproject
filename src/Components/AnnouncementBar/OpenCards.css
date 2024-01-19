@@ -1,0 +1,783 @@
+.opencarddiv1 {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.opencardspan1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.opencardspan2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.opencarddiv2 {
+    height: fit-content;
+    width: 100%;
+    padding: 35px;
+    padding-left: 55px;
+    display: flex;
+    gap: 5px;
+}
+
+.div2firstcart {
+    height: fit-content;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+
+.div2firstinners {
+    width: 100%;
+    height: 30%;
+
+}
+
+.div2secondcart {
+    height: 130%;
+    width: 55%;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.div2third {
+    height: 250%;
+    width: 55%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-attachment: fixed;
+}
+
+.opancardspan3 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.arrowspan {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bigspan2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.starspan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigspan3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.bigspan4 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bigspan4first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sizespan {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.blackbox {
+    display: flex;
+    gap: 5px;
+}
+
+.bigspan5 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantityspan {
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: fit-content;
+    gap: 40px;
+    border: 1px solid #DDDDDD;
+}
+
+.quantityspan button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.bigspan6 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bigspan6 button {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.addcart {
+    background-color: #DDDDDD;
+    color: black;
+}
+
+.buy {
+    background-color: black;
+    color: white;
+}
+
+.bigspan7 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bigspan8 {
+    display: flex;
+}
+
+.bigspan8 button {
+    padding: 20px;
+    background-color: white;
+}
+
+.detailsbutton {
+    border: 1px solid #DDDDDD;
+    border-left: none;
+    border-bottom: none;
+}
+
+.returns {
+    border: 1px solid #DDDDDD;
+    border-top: none;
+}
+
+.shipping {
+    border: 1px solid #DDDDDD;
+    border-top: none;
+}
+
+.question {
+    border: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+}
+
+.bigspan9 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bigspan10 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.bigspan13 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.threeimagediv {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    justify-content: space-between;
+
+}
+
+.threeimagedivleft {
+    width: 30%;
+    height: 100%;
+}
+
+.threeimagedivright {
+    width: 67%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.selectopbutton{
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.opencarddiv3{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+
+}
+
+.openspan3first{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.openspan3second{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.openspan3third{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.opencarddiv4{
+    width: 100%;
+    padding: 30px;
+}
+
+.opencarddiv4inner{
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.reviewandwrite{
+    display: flex;
+    justify-content: space-between;
+}
+
+.opencarddiv5{
+    padding: 10px;
+    padding-top: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modaldiv1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalspan1{
+    width: 30%;
+    padding-left: 10px;
+    padding: 20px;
+    border-left: none;
+    font-weight: bold;
+    border: 1px solid #DDDDDD;
+}
+
+.modalspan2{
+    width: 70%;
+    padding: 17px;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carts{
+    font-weight: bold;
+    font-size: large;
+}
+
+.modaldiv2{
+    width: 100%;
+    display: flex;
+}
+
+.modaldiv2left{
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 0px;
+
+}
+
+.modaldiv2leftinner{
+    display: flex;
+    flex-direction: column;
+}
+
+.modaldiv2leftinnertop{
+    height: 70%;
+    width: 100%;
+}
+
+.modaldiv2leftinnerbotton{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modaldiv2right{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.modaldiv2rightinner{
+    width: 100%;
+    height: 17%;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    gap: 5px;
+}
+
+.modaldiv2rightinnerleft{
+    height: 100%;
+    width: 30%;
+}
+
+.modaldiv2rightinnerright{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mdspan1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantityspan2{
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    border: 1px solid #DDDDDD;
+}
+
+.quantityspan2 button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.mdspan2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modaldiv2rightfirst{
+    width: 100%;
+    padding-bottom: 0px;
+}
+
+.firstchild1{
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.modaldiv2rightsecond{
+    width: 100%;
+    padding-top: 0px;
+}
+
+.firstchild2{
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between
+}
+
+.modaldiv2rightthird{
+    width: 100%;
+    height: 15%;
+    border: 1px solid #DDDDDD;
+    outline: none;
+}
+
+.modaldiv2rightfour{
+    width: 100%;
+    height: 15%;
+    border: 1px solid #DDDDDD;
+    background-color: #313131;
+    color: white;
+    outline: none;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.modaldiv2rightfive{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightfivespan1{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+}
+
+.rightfivespan2{
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    list-style: none;
+}
+
+.rightfivespan3{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+}
+
+.totalspan{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+}
+
+.buttonspan{
+    display: flex;
+    padding-left: 40px;
+    gap: 10px;
+}
+
+.ViewCartbutton{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #dddddd;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.CheckOutbutton{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #313131;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page{
+    text-decoration: none;
+    list-style: none;
+}
+
+.firstmodaldiv1{
+    position: relative;
+    animation: mymove1 5s;
+    animation-duration: 1s;
+}
+
+#realmodalsecond2{
+    left:810px;
+    width: 40%;
+    height: 150%;
+}
+
+@keyframes mymove1{
+    from{
+        top: -600px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:550px){
+    .opencarddiv2{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .div2firstcart{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          position: static;
+    }
+
+    .div2secondcart{
+        height: fit-content;
+        width: 100%;
+        position: static;
+    }
+
+    .div2third{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-left: 0px;
+    }
+
+    .bigspan1{
+        width: 100%;
+    }
+
+    .bigspan2{
+        width: 100%;
+    }
+    .bigspan3{
+        width: 100%;
+    }
+    .bigspan4{
+        width: 100%;
+    }
+    .bigspan5{
+        width: 100%;
+    }
+    .bigspan6{
+        width: 100%;
+    }
+    .bigspan7{
+        width: 100%;
+    }
+
+    .bigspan8{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .threeimagediv{
+        height:fit-content;
+
+    }
+
+    .opencardspan3{
+        display: flex;
+    }
+
+    .contactdiv5{
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .carousel-card{
+        width: fit-content;
+        margin-left: 0px;
+    }
+
+    #realmodalsecond2{
+        left:0px;
+        width: 100%;
+        height: 30%;
+    }
+
+}
+
+@media screen and (max-width:550px) and (min-width:320px){
+    .opencarddiv2{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0px;
+    }
+
+    .modalspan1{
+        padding: 0px;
+        border: none;
+        padding-left: 10px;
+    }
+
+    .div2firstcart{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          position: static;
+    }
+
+    .div2secondcart{
+        height: fit-content;
+        width: 100%;
+        position: static;
+    }
+
+    .div2third{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-left: 0px;
+    }
+
+    .bigspan1{
+        width: 100%;
+    }
+
+    .bigspan2{
+        width: 100%;
+    }
+    .bigspan3{
+        width: 100%;
+    }
+    .bigspan4{
+        width: 100%;
+    }
+    .bigspan5{
+        width: 100%;
+    }
+    .bigspan6{
+        width: 100%;
+    }
+    .bigspan7{
+        width: 100%;
+    }
+
+    .bigspan8{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    .threeimagediv{
+        height:fit-content;
+    }
+
+    .opencardspan3{
+        display: flex;
+    }
+
+    .contactdiv5{
+        width: 100%;
+        padding-left: 0px;
+        
+    }
+
+    .carousel-card{
+        width: fit-content;
+        margin-left: 0px;
+        padding: 0px;
+    }
+
+    .openspan3first{
+        font-size: 10px;
+    }
+
+    .openspan3second{
+        font-size: 10px;
+    }
+
+    .openspan3third{
+        font-size: 10px;
+    }
+
+    
+    #realmodalsecond2{
+        left:0px;
+        width: 100%;
+        height: 45%;
+    }
+    
+    .buttonspan{
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .ViewCartbutton{
+        width: 100%;
+    }
+
+    .CheckOutbutton{
+        width: 100%;
+    }
+}

@@ -1,0 +1,464 @@
+.arrivaldivfirst{
+    height: 450px;
+    width: 100%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/new.jpg?v=1620085309&width=1920');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.arrivaldiv2{
+    height: 270px;
+    width: 100%;
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.arrivaldiv2inner{
+    height: 100%;
+    width: 100%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/sale.jpg?v=1620085310&width=1200');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top 20px;
+    padding-top: 20px;
+    padding-left: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.shopsale{
+    background-color: #AF0000;
+    color: white;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    outline: none;
+}
+
+.arrivaldiv3{
+    height: fit-content;
+    width: 100%;
+    padding: 20px;
+    padding-left: 40px;
+    display: flex;
+    gap: 20px;
+
+}
+
+.arrivaldiv3left{
+    width: 24%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.span1{
+   text-decoration: none;
+   list-style: none;
+}
+
+.select{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+}
+
+.select:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.select .options{
+    background-color: white;
+    color: black;
+}
+
+
+.span2{
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0px;
+ }
+
+ .span3inner{
+    display: flex;
+ }
+
+ .inputbox{
+    width: 20%;
+    padding: 15px;
+    border: 1px solid #DDDDDD;
+    outline: none;
+ }
+
+ .span3li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .filter-range__slider--wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 20px;
+    padding-top: 10px;
+}
+
+ .filter-range__slider--input{
+    width: 100%;
+    height: 2px;
+ }
+
+ .filter-range__slider--input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.roundspan1{
+    display: flex;
+    gap: 10px;
+}
+
+.rounddiv1{
+    height: 25px;
+    width: 25px;
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+
+.rounddiv1:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.rounddiv1inner{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+input[type="checkbox"]{
+    border: 1px solid red;
+}
+
+.span6{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    gap: 5px;
+    padding-left: 0px;
+}
+
+hr {
+    margin-top: 0px;
+}
+
+.arrivaldiv3right{
+    height: fit-content;
+    width: 73%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.arrivaldiv4{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 60px;
+}
+
+.arrivalbutton1{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.arrivalbutton2{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.arrivalbutton3{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.arrivalbutton4{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.arrivaldiv5{
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.arrivaldiv5left{
+    height: 100%;
+    width: 31%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.arrivaldiv5left img{
+    max-width: 100%;
+    transition: all 0.9s;
+    display:block;
+    height: 100%;
+    transform: scale(1);
+}
+
+.arrivaldiv5left:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.leftspan{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.arrivalshopnow{
+     background-color: black;
+     color: white;
+     padding: 10px;
+     padding-left: 20px;
+     padding-right: 20px;
+}
+
+.arrivaldiv5center{
+    height: 100%;
+    width: 31%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrivaldiv5center img{
+    max-width: 100%;
+    transition: all 0.9s;
+    display:block;
+    height: 100%;
+}
+
+.arrivaldiv5center:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.centerspan{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.arrivaldiv5right{
+    height: 100%;
+    width: 31%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrivaldiv5right img{
+    max-width: 100%;
+    transition: all 0.9s;
+    display:block;
+    height: 100%;
+}
+
+.arrivaldiv5right:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.rightspan{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+@media screen and (max-width:950px) and (min-width:540px){
+    .arrivaldiv3{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .arrivaldiv3left{
+        width: 100%;
+    }
+
+    .arrivaldiv3right{
+        width: 100%;
+        padding-left: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .arrivaldiv5{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 1500px;
+        padding: 10px;
+        gap: 0px;
+    }
+
+    .arrivaldiv5left{
+        border: 1px solid black;
+        height: 30%;
+        width: 100%;
+    }
+
+    .arrivaldiv5left img{
+        width: 100%;
+    }
+
+
+    .arrivaldiv5center{
+        border: 1px solid black;
+        height: 30%;
+        width: 100%;
+    }
+ 
+    .arrivaldiv5center img{
+        width: 100%;
+    }
+
+    .arrivaldiv5right{
+        border: 1px solid black;
+        height: 30%;
+        width: 100%;
+    }
+
+    .arrivaldiv5right img{
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:430px) and (min-width:320px){
+    .arrivaldivfirst{
+        background-size: cover;
+        background-position-x: center;
+    }
+
+    .arrivaldiv3{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .arrivaldiv3left{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .span6{
+        margin-top: -10px;
+    }
+
+    .arrivaldiv3right{
+        width: 100%;
+    
+    }
+
+    .carousel-card{
+        padding: 0px;
+    }
+
+    .arrivaldiv5{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 1500px;
+        padding: 10px;
+        gap: 0px;
+    }
+
+    .arrivaldiv5left{
+        border: 1px solid black;
+        height: 30%;
+        width: 100%;
+    }
+
+    .arrivaldiv5leftinner{
+        height: 100%;
+        width: 100%;
+    }
+
+    .arrivaldiv5center{
+        border: 1px solid black;
+        height: 30%;
+        width: 100%;
+    }
+
+    .arrivaldiv5centerinner{
+        height: 100%;
+        width: 100%;
+    }
+
+    .arrivaldiv5right{
+        border: 1px solid black;
+        height: 30%;
+        width: 100%;
+    }
+
+    .arrivaldiv5rightinner{
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
