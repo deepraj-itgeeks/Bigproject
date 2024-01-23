@@ -2179,7 +2179,7 @@
 
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:390px) and (min-width:320px) {
     .Hoverdiv {
         display: flex;
         flex-wrap: wrap;
@@ -2237,13 +2237,14 @@
     }
 
     .strong {
-        font-size: 8px;
+        font-size: 6px;
         margin-left: -20px;
     }
 
     .span5 {
         display: flex;
         gap: 30px;
+        font-size: 10px;
     }
 
     .NavigationBar {
