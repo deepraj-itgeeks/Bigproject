@@ -140,9 +140,6 @@
     gap: 15px;
 }
 
-.blogdiv3rightsecondinner{
-    height: 325px;
-}
 
 .charlotte{
     display: flex;
@@ -220,6 +217,99 @@
     }
 }
 
+@media screen and (max-width:540px){
+    .blogdiv3{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .blogdiv3left{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .blogdivleft1{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdivleft1innerleft{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .blogdivleft1innerright{
+        width: 100%;
+    }
+
+
+    .blogdivleft2{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdivleft2innerleft{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .blogdivleft2innerright{
+        width: 100%;
+    }
+
+
+    .blogdivleft3{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogdivleft3innerleft{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .blogdivleft3innerright{
+        width: 100%;
+    }
+
+    .blogdiv3right{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+
+    .blogdiv3rightsecond{
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .blogdiv3rightsecondinner{
+           height: none;
+    }
+
+    .blogdiv3rightfirst{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        height: fit-content;
+    }
+
+    .blogdiv3rightfirst span{
+        width: 30%;
+    }
+}
+
 @media screen and (max-width:430px) and (min-width:320px){
   
     .blogdiv3{
@@ -290,13 +380,15 @@
         width: 100%;
     }
 
+
     .blogdiv3rightsecond{
         display: flex;
+        height: fit-content;
         flex-direction: column;
     }
 
     .blogdiv3rightsecondinner{
-        margin-left: 100px;
+           height: none;
     }
 
 }

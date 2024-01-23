@@ -62,7 +62,7 @@ export default function AnnouncementBar() {
                         return <>
                             <div className='section3div'>
                                 <div className='section3div1'>
-                                    <img src={items.image} style={{ height: "440px", width: "100%" }} className='fourcardimage'/>
+                                    <img src={items.image} style={{height:"100%", width: "100%" }} className='fourcardimage'/>
                                 </div>
                                 <div className='section3div2'><b>{items.name}</b> {items.title}</div>
                             </div>

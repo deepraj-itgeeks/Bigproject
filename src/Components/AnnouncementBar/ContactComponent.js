@@ -10,29 +10,36 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ContainData3 } from '../Redux/MasterSlice';
 export default function Contact() {
 
-  const {Data3} = useSelector((store)=>store.masterData)
+  const { Data3 } = useSelector((store) => store.masterData)
 
   const dispatch = useDispatch()
 
   const [products, setProducts] = useState([])
   const [isChange, setIsChange] = useState([])
 
-  const [name,setName] = useState()
-  const [name2,setName2] = useState()
-  const [name3,setName3] = useState()
-  const [name4,setName4] = useState()
+  const [name, setName] = useState()
+  const [name2, setName2] = useState()
+  const [name3, setName3] = useState()
+  const [name4, setName4] = useState()
 
-  const [username,setUsername] = useState()
-  const [useremail,setUseremail] = useState()
-  const [userphone,setUserphone] = useState()
-  const [usermessage,setUsermessage] = useState()
+  const [username, setUsername] = useState()
+  const [useremail, setUseremail] = useState()
+  const [userphone, setUserphone] = useState()
+  const [usermessage, setUsermessage] = useState()
 
-  const [nameerror,setNameError] = useState({})
-  const [emailerror,setEmailError] = useState({})
-  const [phoneerror,setPhoneError] = useState({})
-  const [messageerror,setMessageError] = useState({})
+  const [nameerror, setNameError] = useState({})
+  const [emailerror, setEmailError] = useState({})
+  const [phoneerror, setPhoneError] = useState({})
+  const [messageerror, setMessageError] = useState({})
 
-  const [detail,setDetail] = useState([])
+  const [detail, setDetail] = useState([])
+
+  const [realid, setRealId] = useState()
+  const [realid2, setRealId2] = useState()
+  const [realid3, setRealId3] = useState()
+  const [realid4, setRealId4] = useState()
+
+   const [open, setOpen] = useState(false)
 
 
   const HandleMouseOver = (index) => {
@@ -54,81 +61,87 @@ export default function Contact() {
       })
   }, [])
 
-  const Validation1 = (event)=>{
+  const Validation1 = (event) => {
     var name = event.target.value;
     setName(name)
     var value = event.target.value;
-    var newError = {...nameerror}
-    if(value == "" || value == null){
+    var newError = { ...nameerror }
+    if (value == "" || value == null) {
       newError[name] = "Please Enter Name"
     }
-    else{
+    else {
       newError[name] = ""
     }
     setNameError(newError)
     setUsername(value)
   }
 
-  const Validation2 = (event)=>{
+  const Validation2 = (event) => {
     var name = event.target.value;
     setName2(name)
     var value = event.target.value;
-    var newError = {...emailerror}
-    if(value == "" || value == null)
-    {
+    var newError = { ...emailerror }
+    if (value == "" || value == null) {
       newError[name] = "Please Enter Email"
     }
-    else if(value.includes("@gmail.com")){
+    else if (value.includes("@gmail.com")) {
       newError[name] = ""
     }
-    else{
+    else {
       newError[name] = "Enter Valid Email"
     }
     setEmailError(newError)
     setUseremail(value)
   }
 
-  const Validation3 = (event)=>{
+  const Validation3 = (event) => {
     var name = event.target.name;
     setName3(event.target.name)
     var value = event.target.value;
-    var newError = {...phoneerror}
-    if(value == "" || value == null){
+    var newError = { ...phoneerror }
+    if (value == "" || value == null) {
       newError[name] = "Please Enter PhoneNumber"
     }
-    else{
+    else {
       newError[name] = ""
     }
     setPhoneError(newError)
     setUserphone(value)
   }
 
-  const Validation4 = (event)=>{
+  const Validation4 = (event) => {
     var name = event.target.name;
     setName4(event.target.name)
     var value = event.target.value
-    var newError = {...messageerror}
-    if(value == "" || value == null)
-    {
-      newError[name]= "Please Enter Message"
+    var newError = { ...messageerror }
+    if (value == "" || value == null) {
+      newError[name] = "Please Enter Message"
     }
-    else{
+    else {
       newError[name] = ""
     }
     setMessageError(newError)
     setUsermessage(value)
   }
 
-  const Send = ()=>{
-     setDetail((detail)=>({...detail,username,useremail,userphone,usermessage}))
-     alert("Your Detail Successfully Send")
+  const Send = () => {
+    setDetail((detail) => ({ ...detail, username, useremail, userphone, usermessage }))
+    alert("Your Detail Successfully Send")
   }
 
-  useEffect(()=>{
-     dispatch(ContainData3(detail))
-  },[detail])
+  useEffect(() => {
+    dispatch(ContainData3(detail))
+  }, [detail])
 
   console.log(Data3)
+
+  const Select = (data, data1, data2, data3)=>{
+    setOpen(true)
+    setRealId(data)
+    setRealId2(data1)
+    setRealId3(data2)
+    setRealId4(data3)
+}
 
   return <>
     <TopAnnouncementBar />
@@ -145,16 +158,16 @@ export default function Contact() {
 
     <div className='contactdiv3'>
       <div className='contactdiv3inner'>
-        <TextField id="outlined-basic" name='username' label="Name" variant="outlined" className='textfield' InputLabelProps={{ style: { color: "black" } }} onInput={Validation1}/>
-        <span style={{color:"red"}}>{nameerror[name]}</span>
-        <TextField id="outlined-basic" name='useremail' label="Email" variant="outlined" className='textfield' InputLabelProps={{ style: { color: "black" } }} onInput={Validation2}/>
-        <span style={{color:"red"}}>{emailerror[name2]}</span>
-        <TextField id="outlined-basic" type='number' name='userphone' label="Phone Number" variant="outlined" className='textfield' InputLabelProps={{ style: { color: "black" } }} onInput={Validation3}/>
-        <span style={{color:'red'}}>{phoneerror[name3]}</span>
-        <TextField id="outlined-basic" name='usermessage' label="Message" variant="outlined" className='textarea' inputProps={{ style: { height: "120px" } }} InputLabelProps={{ style: { color: "black" } }} onInput={Validation4}/>
-        <span style={{color:"red"}}>{messageerror[name4]}</span>
+        <TextField id="outlined-basic" name='username' label="Name" variant="outlined" className='textfield' InputLabelProps={{ style: { color: "black" } }} onInput={Validation1} />
+        <span style={{ color: "red" }}>{nameerror[name]}</span>
+        <TextField id="outlined-basic" name='useremail' label="Email" variant="outlined" className='textfield' InputLabelProps={{ style: { color: "black" } }} onInput={Validation2} />
+        <span style={{ color: "red" }}>{emailerror[name2]}</span>
+        <TextField id="outlined-basic" type='number' name='userphone' label="Phone Number" variant="outlined" className='textfield' InputLabelProps={{ style: { color: "black" } }} onInput={Validation3} />
+        <span style={{ color: 'red' }}>{phoneerror[name3]}</span>
+        <TextField id="outlined-basic" name='usermessage' label="Message" variant="outlined" className='textarea' inputProps={{ style: { height: "120px" } }} InputLabelProps={{ style: { color: "black" } }} onInput={Validation4} />
+        <span style={{ color: "red" }}>{messageerror[name4]}</span>
 
-        <button style={{cursor:"pointer"}} className='sendbutton' onClick={()=>{Send()}}>Send</button> 
+        <button style={{ cursor: "pointer" }} className='sendbutton' onClick={() => { Send() }}>Send</button>
       </div>
     </div>
 
@@ -182,9 +195,9 @@ export default function Contact() {
 
       })}
     </div>
-     <br/><br/>
-    <Section9/>
+    <br /><br />
+    <Section9 />
 
-    <Section10/>
+    <Section10 />
   </>
 }
