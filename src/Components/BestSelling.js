@@ -3,7 +3,7 @@ import '../Components/AnnouncementBar/AnnouncementBar.css'
 export default function BestSelling() {
   return <>
     <div className='bestselling'>
-            <p>BEST SELLING</p>
+            <p className='bestsellinginner'>BEST SELLING</p>
         </div>
   </>
 }

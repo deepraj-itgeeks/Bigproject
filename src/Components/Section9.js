@@ -44,7 +44,7 @@ export default function Section9() {
                     <input className='input2' type='submit' value='Join' onClick={()=>{Join()}}/>
                     </>}
                 </span>
-                <span style={{color:"red"}}>{emailerror}</span>
+                <span style={{color:"red"}} className='section9errorspan'>{emailerror}</span>
                 <div className='first' style={{paddingLeft:"0px"}}>
                     <span className='span1'><Facebook /></span>
                     <span className='span2'><Twitter /></span>

@@ -177,7 +177,7 @@ export default function OpenCards() {
         const total = document.getElementsByClassName("page");
         var sum = 0;
         for (var i = 0; i < total.length; i++) {
-            sum = parseFloat(total[i].innerHTML) + sum
+            sum = parseInt(total[i].innerHTML) + sum
             setTotalAdd(sum)
         }
 
@@ -493,7 +493,7 @@ export default function OpenCards() {
                 <div className='firstmodaldiv1' style={{ overflowY: "scroll", height: "600px" }}>
                     <div className='modaldiv1'>
                         <div className='modalspan1'>Featured items</div>
-                        <div className='modalspan2'><Cross style={{ cursor: "pointer" }} onClick={handleClose} /> <span className="carts">Cart</span> <span>5 Item(s)</span></div>
+                        <div className='modalspan2'><Cross style={{ cursor: "pointer" }} onClick={handleClose} /> <span className="carts">Cart</span> <span>Item(s)</span></div>
                     </div>
                     <div className='modaldiv2'>
                         <div className='modaldiv2left'>
@@ -537,8 +537,8 @@ export default function OpenCards() {
                                                     <span className='mdspan2'>
                                                         {item.variants.map((item, ind) => {
                                                             return <>
-                                                                {ind == 0 ? <span className='quantityspan2'> <button id={item.id} onClick={Negative1}>-</button>{(state1[`name${parseInt(item.id)}`] === undefined)?1 :state1[`name${parseInt(item.id)}`]}<button id={item.id} onClick={Possitive1}>+</button></span> : null}
-                                                                {ind == 0 ? <><span style={{ marginLeft: "60px" }}>$</span><li className='page'>{(state1[`name${parseInt(item.id)}`] === undefined)? item.price:parseInt(item.price * state1[`name${parseInt(item.id)}`])}</li></> : null}
+                                                                {ind == 0 ? <span className='quantityspan2'> <button id={item.id} onClick={Negative1}>-</button><span className='buttonspanhe'>{(state1[`name${parseInt(item.id)}`] === undefined)?1 :state1[`name${parseInt(item.id)}`]}</span><button id={item.id} onClick={Possitive1}>+</button></span> : null}
+                                                                {ind == 0 ? <><span style={{display:"flex"}}><span className='doller'>$</span><li className='page'>{(state1[`name${parseInt(item.id)}`] === undefined)? item.price:parseInt(item.price * state1[`name${parseInt(item.id)}`])}</li></span></> : null}
                                                             </>
                                                         })}
                                                     </span>

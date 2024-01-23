@@ -9,7 +9,7 @@ export default function Section4() {
   return <>
     <div className='section4'>
             <h2>ACCESSORIZE IN STYLE</h2>
-            <p>FIND YOUR LOOK IN OUR CAREFULLY CURATED COLLECTIONS</p>
+            <p className='section4para'>FIND YOUR LOOK IN OUR CAREFULLY CURATED COLLECTIONS</p>
             <button className='shopall' onClick={GoToCart}>SHOP ALL</button>
         </div>
   </>
