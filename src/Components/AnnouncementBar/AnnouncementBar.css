@@ -1062,6 +1062,7 @@
 .section10rightspan2 {
     display: flex;
     gap: 10px;
+    z-index: -3;
 }
 
 .section10rightspan3 {
