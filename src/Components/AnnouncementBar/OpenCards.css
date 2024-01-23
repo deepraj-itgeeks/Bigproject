@@ -896,16 +896,193 @@
 
     .mdspan2 {
         display: flex;
-        gap: 70px;
     }
 
 
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:390px) and (min-width:330px){
     .modaldiv2leftinnerbotton {
         font-size: 12px;
     }
+
+    .opencarddiv1 {
+        display: flex;
+        gap: 0px;
+    }
+
+    .opencardspan1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opencarddiv2 {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0px;
+    }
+
+    .modalspan1 {
+        padding: 0px;
+        border: none;
+        padding-left: 10px;
+        font-size: 11px;
+    }
+
+    .div2firstcart {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        position: static;
+    }
+
+    .div2secondcart {
+        height: fit-content;
+        width: 100%;
+        position: static;
+    }
+
+    .div2third {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-left: 0px;
+    }
+
+    .bigspan1 {
+        width: 100%;
+    }
+
+    .bigspan2 {
+        width: 100%;
+    }
+
+    .bigspan3 {
+        width: 100%;
+    }
+
+    .bigspan4 {
+        width: 100%;
+    }
+
+    .bigspan5 {
+        width: 100%;
+    }
+
+    .bigspan6 {
+        width: 100%;
+    }
+
+    .bigspan7 {
+        width: 100%;
+    }
+
+    .bigspan8 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    .threeimagediv {
+        height: fit-content;
+    }
+
+    .opencardspan3 {
+        display: flex;
+    }
+
+    .contactdiv5 {
+        width: 100%;
+        padding-left: 0px;
+
+    }
+
+    .carousel-card {
+        width: fit-content;
+        margin-left: 0px;
+        padding: 0px;
+    }
+
+    .openspan3first {
+        font-size: 10px;
+    }
+
+    .openspan3second {
+        font-size: 10px;
+    }
+
+    .openspan3third {
+        font-size: 10px;
+    }
+
+
+    #realmodalsecond2 {
+        left: 0px;
+        width: 100%;
+        height: 65%;
+    }
+
+    .buttonspan {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .ViewCartbutton {
+        width: 100%;
+    }
+
+    .CheckOutbutton {
+        width: 100%;
+    }
+
+
+    .modaldiv2left {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .modaldiv2leftinnerbotton {
+        font-size: 11px;
+    }
+
+    .modaldiv2right {
+        padding: 0px;
+
+    }
+
+    .quantityspan2 {
+        padding: 0px;
+        display: flex;
+        border: 1px solid #DDDDDD;
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    .modaldiv2rightinnerleft {
+        height: fit-content;
+    }
+
+    .modaldiv2rightinner {
+        height: fit-content;
+    }
+
+    .buttonspanhe {
+        width: 20%;
+    }
+
+    .mdspan2 {
+        display: flex;
+        gap: 25px;
+    }
+    
 }
 
 @media screen and (max-width:320px) {
