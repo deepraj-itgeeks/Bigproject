@@ -5,6 +5,7 @@ import { ReactComponent as ArrivalArrow } from '../Svgs/ArrivalArrow.svg'
 import { ReactComponent as ArrivalArrow2 } from '../Svgs/ArrivalArrow2.svg'
 import Section9 from '../Section9'
 import Section10 from '../Section10'
+import '../AnnouncementBar/ShopSale.css'
 import '../AnnouncementBar/ArrivalsComponent2.css'
 import Products from '../Products.json'
 import { Checkbox } from '@mui/material';
@@ -37,7 +38,7 @@ export default function ArrivalsComponent() {
     useEffect(() => {
         axios.get("https://fashionopolism-secret-sale.myshopify.com/products.json")
             .then((response) => {
-                setProducts(response.data.products.splice(0, 36))
+                setProducts(response.data.products.splice(3, 3))
             })
     }, [])
 
@@ -75,13 +76,15 @@ export default function ArrivalsComponent() {
        setRange2(event.target.value)
    }
 
+   console.log(products)
+
     return <>
         <TopAnnouncementBar />
 
         <Navbar />
 
-        <div className='arrivaldiv1'>
-            Dresses
+        <div className='ShopSalediv1'>
+            Sale
         </div>
 
         <div className='arrivaldiv2'>
@@ -113,7 +116,7 @@ export default function ArrivalsComponent() {
                     <p style={{ fontWeight: "bold" }}>Availability</p>
                     <hr />
                     <input type='checkbox' /> In stock (43)<br />
-                    <input type='checkbox' /> Out of stock (1)
+                    <input type='checkbox' disabled={true}/> <span>Out of stock (1)</span>
                 </span>
 
                 <span className='span3'>
@@ -135,7 +138,7 @@ export default function ArrivalsComponent() {
                     {Products.map((items, ind) => {
                         return <>
                             {ind == 0 ?
-                                items.data.map((item) => {
+                                items.data.slice(0,4).map((item) => {
                                     return <>
                                         <span className='roundspan1'>
                                             <div className='rounddiv1'>
@@ -183,7 +186,6 @@ export default function ArrivalsComponent() {
 
             <div className='arrivaldiv3right'>
                 {FinalData.map((data, ind) => {
-                    console.log(FinalData)
                     return <div className='carousel-card'>
                         <img src={(isChange[ind] === true) ? data.images[0].src : data.images[1].src} alt="" className='card-image' onMouseOver={() => { HandleMouseOver(ind) }} onMouseOut={() => { HandleMouseOut(ind) }} />
                         <div class="middle">
@@ -192,7 +194,7 @@ export default function ArrivalsComponent() {
                         <center>
                             <div className="carousel-card-text-area">
                                 <span>{data.title}</span>
-                                <span>$ {data.variants[0].price}</span>
+                                <span>$ <strike style={{color:"red"}}>{data.variants[0].price}</strike>  34.95</span>
                                 <span className='apispan'>
                                     <img src={data.images[0].src} alt="" style={{ height: "30px", width: "30px", borderRadius: "50%" }} />
                                 </span>
@@ -200,7 +202,7 @@ export default function ArrivalsComponent() {
                                 <span className='carousel-card-types-circles'></span>
                             </div>
                         </center>
-                        <span className='new'>New</span>
+                        <span className='new' style={{backgroundColor:"#AF0000" ,color:"white",fontFamily:"-moz-initial"}}>Save $34.95</span>
                     </div>
 
                 })}

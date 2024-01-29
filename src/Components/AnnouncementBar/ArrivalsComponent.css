@@ -318,6 +318,38 @@ hr {
     color: white;
 }
 
+.rangeclass{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    text-align: center;
+}
+
+.rangeclass input{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 100%;
+    outline: none;
+    height: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.rangeclass input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    height: 2px;
+    widows: 24px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px solid black;
+    -webkit-appearance: none;
+}
+
 
 @media screen and (max-width:950px) and (min-width:540px){
     .arrivaldiv3{

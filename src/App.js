@@ -11,6 +11,7 @@ import ArrivalsComponent2 from './Components/AnnouncementBar/ArrivalsComponent2'
 import OpenCards from './Components/AnnouncementBar/OpenCards';
 import Account from './Components/AnnouncementBar/Account';
 import PaymentGetway from './Components/AnnouncementBar/PaymentGetway';
+import ShopSale from './Components/AnnouncementBar/ShopSale';
 
 function App() {
   return <>
@@ -25,6 +26,7 @@ function App() {
       <Route path='opencard' element={<OpenCards/>}/>
       <Route path='account' element={<Account/>}/>
       <Route path='paymentgetway' element={<PaymentGetway/>}/>
+      <Route path='shopsale' element={<ShopSale/>}/>
     </Routes>
   </>
 }
