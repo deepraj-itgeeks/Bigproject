@@ -73,7 +73,7 @@
 .NavigationBar {
     padding: 25px;
     display: flex;
-    gap: 180px;
+    gap: 130px;
     background-color: whitesmoke;
     position: sticky;
     top: 0px;

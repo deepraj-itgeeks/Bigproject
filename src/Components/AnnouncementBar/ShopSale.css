@@ -1,0 +1,14 @@
+.ShopSalediv1{
+    height: 450px;
+    width: 100%;
+    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/sale.jpg?v=1620085310&width=1920');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+}

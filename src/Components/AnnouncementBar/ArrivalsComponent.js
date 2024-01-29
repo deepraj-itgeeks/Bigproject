@@ -9,6 +9,7 @@ import '../AnnouncementBar/ArrivalsComponent.css'
 import Products from '../Products.json'
 import { Checkbox } from '@mui/material';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export default function ArrivalsComponent() {
     const [products, setProducts] = useState([])
     const [isChange, setIsChange] = useState([])
@@ -17,6 +18,11 @@ export default function ArrivalsComponent() {
     const [page2, setPage2] = useState(12)
 
     const [active, setActive] = useState("1")
+
+    const [range1,setRange1] = useState(0)
+    const [range2,setRange2] = useState(90)
+
+    const navigate = useNavigate()
 
 
     const HandleMouseOver = (index) => {
@@ -64,6 +70,18 @@ export default function ArrivalsComponent() {
         setActive(event.target.id)
     }
 
+    const Range1 = (event)=>{
+         setRange1(event.target.value)
+    }
+
+    const Range2 = (event)=>{
+        setRange2(event.target.value)
+    }
+
+    const ShopSale = ()=>{
+       navigate('/shopsale')
+    }
+    
     return <>
         <TopAnnouncementBar />
 
@@ -77,7 +95,7 @@ export default function ArrivalsComponent() {
             <div className='arrivaldiv2inner'>
                 <h3 style={{ color: "#AF0000" }}>SALE now on</h3>
                 <p style={{ color: "#AF0000" }}>Shop our mid Season sale for a range of discounted items</p>
-                <button className='shopsale'>Shop Sale</button>
+                <button className='shopsale' onClick={()=>{ShopSale()}}>Shop Sale</button>
             </div>
         </div>
 
@@ -109,11 +127,11 @@ export default function ArrivalsComponent() {
                     <p style={{ fontWeight: "bold" }}>Price</p>
                     <hr />
                     <span className='span3inner'>
-                        <li className='span3li'>$</li> <input className='inputbox' type='text' placeholder='0' /> <li className='span3li'>$</li> <input className='inputbox' type='text' placeholder='90' />
+                        <li className='span3li'>$</li> <input className='inputbox' type='text' placeholder={range1} /> <li className='span3li'>$</li> <input className='inputbox' type='text' placeholder={range2} />
                     </span>
-                    <div class="filter-range__slider--wrapper">
-                        <input class="filter-range__slider--input" value="0" min="0" max="90" step="1.00" type="range" />
-                        <input class="filter-range__slider--input" value="90" min="0" max="90" step="1.00" type="range" />
+                    <div class="filter-range__slider--wrapper  rangeclass">
+                        <input type='range' id='range1' className='range1' onChange={(event)=>{Range1(event)}}/>
+                        <input type='range' id='range2' className='range2' onChange={(event)=>{Range2(event)}}/>
                     </div>
                 </span>
 
@@ -122,6 +140,7 @@ export default function ArrivalsComponent() {
                     <hr />
 
                     {Products.map((items, ind) => {
+
                         return <>
                             {ind == 0 ?
                                 items.data.map((item) => {
@@ -172,7 +191,6 @@ export default function ArrivalsComponent() {
 
             <div className='arrivaldiv3right'>
                 {FinalData.map((data, ind) => {
-                    console.log(FinalData)
                     return <div className='carousel-card'>
                         <img src={(isChange[ind] === true) ? data.images[0].src : data.images[1].src} alt="" className='card-image' onMouseOver={() => { HandleMouseOver(ind) }} onMouseOut={() => { HandleMouseOut(ind) }} />
                         <div class="middle">
