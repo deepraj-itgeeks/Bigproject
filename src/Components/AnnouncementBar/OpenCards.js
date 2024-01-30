@@ -110,11 +110,21 @@ export default function OpenCards() {
     const Negative1 = (event) => {
         const dynamicPropertyName = `name${parseInt(event.target.id)}`;
         setLocalId(event.target.id)
-        setState1((prevState) => ({
-            ...prevState,
-            [dynamicPropertyName]:
-              prevState[dynamicPropertyName] === undefined ? 0 : prevState[dynamicPropertyName] - 1,
-          }));
+        if(state1[`name${parseInt(event.target.id)}`] <= 0){
+            setState1((prevState) => ({
+                ...prevState,
+                [dynamicPropertyName]:
+                  prevState[dynamicPropertyName] === undefined ? 0 : (prevState[dynamicPropertyName])
+              }));
+        }
+
+        else{
+            setState1((prevState) => ({
+                ...prevState,
+                [dynamicPropertyName]:
+                  prevState[dynamicPropertyName] === undefined ? 0 : (prevState[dynamicPropertyName] - 1)
+              }));
+        }
 
     }
 
