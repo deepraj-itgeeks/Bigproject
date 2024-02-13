@@ -12,45 +12,66 @@ import store from '../Redux/Store'
 import { ContainData, ContainData2 } from '../Redux/MasterSlice'
 import usePagination from '@mui/material/usePagination/usePagination'
 import { compose } from '@reduxjs/toolkit'
+import axios from 'axios'
+import { json } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast'
 export default function Account() {
     const [name, setName] = useState()
     const [name2, setName2] = useState()
     const [name3, setName3] = useState()
 
-    const [firstname,setFirstName] = useState()
-    const [lastname,setLastName] = useState()
-    const [emailname,setEmailName] = useState()
-    const [passwordname,setPasswordName] = useState()
+    const [firstname, setFirstName] = useState()
+    const [lastname, setLastName] = useState()
+    const [emailname, setEmailName] = useState()
+    const [passwordname, setPasswordName] = useState()
 
-    const [useremail, setUseremail] = useState([])
+    const [email, setUseremail] = useState([])
     const [useremail2, setUseremail2] = useState([])
     const [userpassword, setUserpassword] = useState([])
 
-    const [firstvalue,setFirstValue] = useState([])
-    const [lastvalue,setLastValue] = useState([])
-    const [emailvalue,setEmailValue] = useState([])
-    const [passwordvalue,setPasswordValue] = useState([])
+    const [firstvalue, setFirstValue] = useState([])
+    const [lastvalue, setLastValue] = useState([])
+    const [emailvalue, setEmailValue] = useState([])
+    const [passwordvalue, setPasswordValue] = useState([])
 
     const [emailError, setemailError] = useState({})
     const [emailError2, setemailError2] = useState({})
     const [passwordError, setpasswordError] = useState({})
 
+    const [resetemailname,setResetEmailName] = useState()
+    const [resetemailvalue,setResetEmailValue] = useState([])
+    const [resetemailerror,setResetEmailError] = useState({})
+
+    const [resetotpname,setResetOtpName] = useState()
+    const [resetotpvalue,setResetOtpValue] = useState([])
+    const [resetotperror,setResetOtpError] = useState({})
+
+    const [resetpasswordname,setResetPasswordName] = useState()
+    const [resetpasswordvalue,setResetPasswordValue] = useState([])
+    const [resetpassworderror,setResetPasswordError] = useState({})
+    
+    const [resetconfirmpassname,setResetConfirmPassName] = useState()
+    const [resetconfirmpassvalue,setResetConfirmPassValue] = useState([])
+    const [resetconfirmpasserror,setResetConfirmPassError] = useState({}) 
+
     const [formdata, setFormData] = useState([])
-    const [createaccount,setCreateAccount] = useState([])
+    const [createaccount, setCreateAccount] = useState([])
 
     const [checkemail, setCheckemail] = useState()
+
+    const [resetpassword, setResetPassword] = useState()
 
     const [modal3, setModal3] = useState()
     const [Enable, setEnable] = useState(false)
     const [Enable2, setEnable2] = useState(false)
-    const [Enable3,setEnable3] = useState(false)
+    const [Enable3, setEnable3] = useState(false)
 
-    const [firstnameerror,setFirstNameError] = useState({})
-    const [lastnameerror,setLastNameError] = useState({})
-    const [emailerror,setEmailError] = useState({})
-    const [passworderror,setPasswordError] = useState({})
+    const [firstnameerror, setFirstNameError] = useState({})
+    const [lastnameerror, setLastNameError] = useState({})
+    const [emailerror, setEmailError] = useState({})
+    const [passworderror, setPasswordError] = useState({})
 
-    const { Data,Data2 } = useSelector((store) => store.masterData)
+    const { Data, Data2 } = useSelector((store) => store.masterData)
 
     const dispatch = useDispatch([])
     const dispatch2 = useDispatch([])
@@ -119,10 +140,15 @@ export default function Account() {
         setEnable2(false)
     }
 
+    const CloseModal1 = ()=>{
+        setResetPassword(false)
+        setModal3(true)
+    }
 
     const Signin = () => {
-        setFormData((formdata) => ({ ...formdata, useremail, userpassword }))
+        setFormData((formdata) => ({ ...formdata, email, userpassword }))
         setEnable(true)
+        toast.success("Your Sign Up Successfully Completed.")
     }
 
     useEffect(() => {
@@ -130,10 +156,26 @@ export default function Account() {
     }, [formdata])
 
 
-    const Submit = () => {
+    const Submit = async () => {
         const newData = Data.filter((item) => { if (item.payload.useremail == useremail2) { return item } })
         const valid = newData.length === 0;
         setCheckemail(valid)
+        setResetPassword(true)
+        setModal3(false)
+
+        toast.success("Email Successfully Matched")
+
+        // const api = await fetch("http://localhost:5000/forgot-password",{
+        //     method:"POST",
+        //     headers:{
+        //         "Content-type":"application/json"
+        //     },
+        //     body:JSON.stringify({email})
+        // })
+
+        // const response = await api.json()
+        // console.log(response)
+
     }
 
     function myFunction() {
@@ -145,6 +187,28 @@ export default function Account() {
         }
     }
 
+    function myFunction1(){
+        var x = document.getElementById("userpassword1");
+        if(x.type === "password"){
+            x.type = "text";
+        }
+        else{
+            x.type = "password"
+        }
+    }
+
+    function myFunction2(){
+        var x = document.getElementById("userconfirmpassword");
+        if(x.type === "password"){
+            x.type = "text";
+        }
+        else{
+            x.type = "password"
+        }
+    }
+
+    
+
 
     const CreateAccount = () => {
         setEnable2(true)
@@ -152,86 +216,163 @@ export default function Account() {
     }
 
 
-    const FirstNameValidation =(event)=>{
+    const FirstNameValidation = (event) => {
         var name = event.target.name;
         setFirstName(name)
         var value = event.target.value;
-        var newError = {...firstnameerror}
-        if(value == "" || value == null){
+        var newError = { ...firstnameerror }
+        if (value == "" || value == null) {
             newError[name] = "Please Enter First Name"
         }
-        else{
+        else {
             newError[name] = ""
         }
         setFirstNameError(newError)
         setFirstValue(value)
     }
 
-    const LastNameValidation = (event)=>{
+    const LastNameValidation = (event) => {
         var name = event.target.name;
         setLastName(name)
         var value = event.target.value;
-        var newError = {...lastnameerror}
-        if(value == "" || value == null){
+        var newError = { ...lastnameerror }
+        if (value == "" || value == null) {
             newError[name] = "Please Enter Last Name"
-        } 
-        else{
+        }
+        else {
             newError[name] = ""
         }
         setLastNameError(newError)
         setLastValue(value)
     }
 
-    const EmailValidation = (event)=>{
+    const EmailValidation = (event) => {
         var name = event.target.name;
         setEmailName(name)
         var value = event.target.value;
-        var newError = {...emailerror}
-        if(value == "" || value  == null){
+        var newError = { ...emailerror }
+        if (value == "" || value == null) {
             newError[name] = "Please Enter Email"
         }
-        else{
+        else {
             newError[name] = ""
         }
         setEmailError(newError)
         setEmailValue(value)
     }
 
-    const PasswordValidation = (event)=>{
+    const ResetEmailValidation = (event)=>{
+         var name = event.target.name;
+         setResetEmailName(name)
+         var value = event.target.value;
+         var newError = {...resetemailerror}
+         if(value == "" || value == null){
+            newError[name] = "Please Enter Email"
+         }
+         else if(value.includes("@gmail.com") || value === useremail2){
+            newError[name] = ""
+         }
+         else{
+            newError[name] = "Enter Valid Email"
+         }
+
+         setResetEmailError(newError)
+         setResetEmailValue(value)
+
+    }
+
+    const PasswordValidation = (event) => {
         var name = event.target.name;
         setPasswordName(name)
         var value = event.target.value;
-        var newError = {...passworderror}
-        if(value == "" || value == null){
+        var newError = { ...passworderror }
+        if (value == "" || value == null) {
             newError[name] = "Please Enter Password"
         }
-        else{
+        else {
             newError[name] = ""
         }
         setPasswordError(newError)
         setPasswordValue(value)
     }
 
-    const Create = ()=>{
-        setCreateAccount((createaccount)=>({...createaccount,firstvalue,lastvalue,emailvalue,passwordvalue}))
-        alert(" Your Account Successfully Created")
+    const OtpValidation = (event)=>{
+        var name = event.target.name;
+        setResetOtpName(name)
+        var value = event.target.value;
+        var newError = {...resetotperror}
+        if(value == "" || value == null){
+            newError[name] = "Please Enter OTP"
+        }
+        else{
+            newError[name] = ""
+        }
+
+        setResetOtpError(newError)
+        setResetOtpValue(value)
+    }
+
+    const PassValidation = (event)=>{
+        var name = event.target.name;
+        setResetPasswordName(name)
+        var value = event.target.value;
+        var newError = {...resetpassworderror}
+        if(value == "" || value == null){
+            newError[name] = "Please Enter Password"
+        }
+        else{
+            newError[name] = ""
+        }
+
+        setResetPasswordError(newError)
+        setResetPasswordValue(value)
+    }
+
+    const ConfirmPassValidation = (event)=>{
+        var name = event.target.name
+        setResetConfirmPassName(name)
+        var value = event.target.value;
+        var newError = {...resetconfirmpasserror}
+        if(value == "" || value == null){
+            newError[name] = "Please Enter Confirm Password"
+        }
+        else if(resetpasswordvalue === value){
+            newError[name] = ""
+        }
+        else if(resetpasswordvalue != value){
+            newError[name] = "Password doest not Matched"
+        }
+        else{
+            newError[name] = ""
+        }
+        setResetConfirmPassError(newError)
+        setResetConfirmPassValue(value)
+    }
+
+    const GOToLogin = ()=>{
+        setModal3(false)
+        setResetPassword(false)
+    }
+
+    const Create = () => {
+        setCreateAccount((createaccount) => ({ ...createaccount, firstvalue, lastvalue, emailvalue, passwordvalue }))
+        toast.success("Your Account Successfully Created")
     }
 
     useEffect(() => {
         dispatch2(ContainData2(createaccount))
     }, [createaccount])
 
-    console.log(Data2)
     return <>
         <TopAnnouncementBar />
 
         <Navbar />
-        {Enable == true ? <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {/* {Enable == true ? <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Success!</strong>  Your Sign Up Successfully Completed.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-        </div> : null}
+        </div> : null} */}
 
         <div className='accountdiv1'>
             <div className='accountdivinner'>
@@ -247,11 +388,12 @@ export default function Account() {
                     <span style={{ color: "red" }}>{passwordError[name2]}</span>
                     <span style={{ display: "flex", gap: "10px" }}><input type="checkbox" onClick={() => { myFunction() }} />Show Password </span>
                 </span>
-                {useremail == "" || userpassword == "" ? <button className='signin' disabled={true} style={{ backgroundColor: "gray", cursor: "pointer" }} onClick={() => { Signin() }}>Sign In</button> : <button className='signin' disabled={false} onClick={() => { Signin() }}>Sign In</button>}
+                {email == "" || userpassword == "" ? <button className='signin' disabled={true} style={{ backgroundColor: "gray", cursor: "pointer" }} onClick={() => { Signin() }}>Sign In</button> : <button className='signin' disabled={false} onClick={() => { Signin() }}>Sign In</button>}
+                <Toaster/>
                 <span className='orspan'>
                     <span className='orleft'></span><span className='orinner'>Or</span><span className='orright'></span>
                 </span>
-                <button className='create' onClick={()=>{CreateAccount()}}>Create Account</button>
+                <button className='create' onClick={() => { CreateAccount() }}>Create Account</button>
             </div>
         </div>
 
@@ -260,7 +402,7 @@ export default function Account() {
         <Section10 />
 
         <Modal isOpen={modal3} isClose={modal3}>
-            {checkemail === false ? <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {/* {checkemail === false ? <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong>success!</strong> Email Successfully Matched.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -270,7 +412,7 @@ export default function Account() {
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div> : null}
+            </div> : null} */}
             <div className='modalthirddiv1'>
                 <Cross style={{ cursor: "pointer" }} onClick={CloseModal} />
             </div>
@@ -280,11 +422,11 @@ export default function Account() {
                 <p>We will sent you an email to reset your password.</p>
                 <span className='emailspan'>
                     <label className='emaillable'>Email</label>
-                    <input type='email' name='useremail' id='useremail' className='Useremail' style={{ width: "95%" }} onInput={Validate3} />
+                    <input type='email' name='email' id='useremail' className='Useremail' style={{ width: "95%" }} onInput={Validate3} />
                     <span style={{ color: "red" }}>{emailError2[name3]}</span>
                 </span>
-                <button className='modalthirdsubmitbutton' onClick={() => { Submit() }}>Submit</button>
-            </div>
+                {useremail2 == "" || useremail2 == null || email !== useremail2? <button disabled={true} style={{backgroundColor:"gray"}} className='modalthirdsubmitbutton' onClick={() => { Submit() }}>Submit</button> : <button disabled={false} className='modalthirdsubmitbutton' onClick={() => { Submit() }}>Submit</button>}
+            </div> 
         </Modal>
 
         <Modal isOpen={Enable2}>
@@ -298,29 +440,68 @@ export default function Account() {
 
                 <span className='modalfourspan2'>
                     <label className='modalfourlable1'>First Name</label>
-                    <input type='text' name='firstname' className='firstinput' onInput={FirstNameValidation}/>
+                    <input type='text' name='firstname' className='firstinput' onInput={FirstNameValidation} />
                     <span style={{ color: "red" }}>{firstnameerror[firstname]}</span>
                 </span>
 
                 <span className='modalfourspan3'>
                     <label className='modalfourlable2'>Last Name</label>
-                    <input type='text' name='lastname' className='lastinput' onInput={LastNameValidation}/>
-                    <span style={{color:'red'}}>{lastnameerror[lastname]}</span>
+                    <input type='text' name='lastname' className='lastinput' onInput={LastNameValidation} />
+                    <span style={{ color: 'red' }}>{lastnameerror[lastname]}</span>
                 </span>
 
                 <span className='modalfourspan4'>
                     <label className='modalfourlable3'>Email</label>
-                    <input type='email' name='email' className='emailinput' onInput={EmailValidation}/>
-                    <span style={{color:"red"}}>{emailerror[emailname]}</span>
+                    <input type='email' name='email' className='emailinput' onInput={EmailValidation} />
+                    <span style={{ color: "red" }}>{emailerror[emailname]}</span>
                 </span>
 
                 <span className='modalfourspan5'>
                     <label className='modalfourlable4'>Password</label>
-                    <input type='password' name='password' className='passwordinput' onInput={PasswordValidation}/>
-                    <span style={{color:"red"}}>{passworderror[passwordname]}</span>
+                    <input type='password' name='password' className='passwordinput' onInput={PasswordValidation} />
+                    <span style={{ color: "red" }}>{passworderror[passwordname]}</span>
                 </span>
 
-                {firstvalue == "" || lastvalue == "" || emailvalue == "" || passwordvalue == "" ? <button disabled={true}  style={{backgroundColor:"gray",cursor:"pointer"}} className='Createbutton'>Create</button> : <button disabled={false} style={{cursor:"pointer"}} className='Createbutton' onClick={()=>{Create()}}>Create</button> }
+                {firstvalue == "" || lastvalue == "" || emailvalue == "" || passwordvalue == "" ? <button disabled={true} style={{ backgroundColor: "gray", cursor: "pointer" }} className='Createbutton'>Create</button> : <button disabled={false} style={{ cursor: "pointer" }} className='Createbutton' onClick={() => { Create() }}>Create</button>}
+                <Toaster/>
+            </div>
+        </Modal>
+
+        <Modal isOpen={resetpassword}>
+            <div className='resetparentdiv'>
+                <div className='resetdiv'>
+                    <Cross style={{ cursor: "pointer" }} onClick={CloseModal1} />
+                </div>
+
+                <div className='resetdiv1'>
+                    <label className='emaillable'>Email</label>
+                    <input type='email' name='useremail' id='useremail' className='Useremail' style={{ width: "100%" }} onInput={ResetEmailValidation}/>
+                    <span style={{ color: "red" }}>{resetemailerror[resetemailname]}</span>
+                </div>
+
+                <div className='resetdiv2'>
+                    <label className='otp'>OTP</label>
+                    <input type='text' name='userotp' id='userotp' className='Userotp' style={{ width: "100%" }} onInput={OtpValidation}/>
+                    <span style={{color:"red"}}>{resetotperror[resetotpname]}</span>
+                </div>
+
+                <div className='resetdiv3'>
+                    <label className='password'>Password</label>
+                    <input type='password' name='userpassword' id='userpassword1' className='Userpassword' style={{ width: "100%" }} onInput={PassValidation}/>
+                    <span style={{color:"red"}}>{resetpassworderror[resetpasswordname]}</span>
+                    <span style={{ display: "flex", gap: "10px" }}><input type="checkbox" onClick={() => { myFunction1() }} />Show Password </span>
+                </div>
+
+                <div className='resetdiv4'>
+                    <label className='confirmpassword'>Confirm Password</label>
+                    <input type='password' name='userconfirmpassword' id='userconfirmpassword' className='Userconfirmpassword' style={{ width: "100%" }} onInput={ConfirmPassValidation}/>
+                    <span style={{color:"red"}}>{resetconfirmpasserror[resetconfirmpassname]}</span>
+                    <span style={{ display: "flex", gap: "10px" }}><input type="checkbox" onClick={() => { myFunction2() }} />Show Password </span>
+                </div>
+
+                <div className='resetdiv5'>
+                    {resetemailvalue == "" || resetemailvalue == null || resetotpvalue == "" || resetotpvalue == null || resetpasswordvalue == "" || resetpasswordvalue == null || resetconfirmpassvalue == "" || resetconfirmpassvalue == null || resetpasswordvalue != resetconfirmpassvalue? <button disabled={true} style={{backgroundColor:"gray"}} className='submit'>Submit</button> : <button className='submit' onClick={GOToLogin}>Submit</button>}
+                </div>
             </div>
         </Modal>
     </>

@@ -34,6 +34,7 @@ export default function OpenCards() {
 
     const [state, setState] = useState(1)
     const [state1, setState1] = useState([])
+    const [state2,setState2] = useState([])
     const [products, setProducts] = useState([])
     const [isChange, setIsChange] = useState([])
 
@@ -77,7 +78,12 @@ export default function OpenCards() {
     }
 
     const Negative = () => {
-        setState(state - 1)
+        if(state <=0){
+            setState(state)
+        }
+        else{
+            setState(state - 1)
+        }
     }
 
     // const Possitive1 = (event) => {
@@ -156,12 +162,13 @@ export default function OpenCards() {
             setOpen(true)
         }, 1000);
         setLocalData(data2)
+    
 
     }
 
     const AddCart1 = () => {
         setOpen(true)
-        setLocalData(data2)
+        setLocalData(data2);
     }
 
     const Delete = (event) => {
@@ -191,7 +198,7 @@ export default function OpenCards() {
             setTotalAdd(sum)
         }
 
-    }, 2000);
+    }, 1000);
 
     const SlicingImages = (ind) => {
         setMatch(ind)
@@ -228,6 +235,7 @@ export default function OpenCards() {
         setDetail2(false)
         setDetail3(false)
     }
+    // console.log(localdata)
     return <>
 
         <TopAnnouncementBar />

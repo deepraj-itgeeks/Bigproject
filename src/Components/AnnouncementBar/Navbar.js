@@ -49,7 +49,7 @@ export default function Navbar() {
                 {Products.map((items) => {
                     return <>
                         
-                            <span className='combospan' onMouseOver={() => { MouseHover() }} onMouseOut={()=>{MouseOut()}} onClick={()=>{GoShop()}}>
+                            <span className='combospan' onMouseOver={() => { MouseHover() }} onClick={()=>{GoShop()}}>
                             <span className='shop'>{items.shop}</span>
                                 <span className='arrow'><Arrow /></span>
                             </span>
@@ -80,7 +80,22 @@ export default function Navbar() {
                 </span>
             </span>
 
-            {hover == true ? <Hove/> : ""}
+            {hover == true ?  <div className='Hoverdiv'>
+            <div className='Hoverdiv1' onMouseOut={()=>{MouseOut()}}></div>
+            <div className='Hoverdiv2'>
+                <li style={{ fontWeight: "bold" }}>By Type</li>
+                <li>Dresses</li>
+                <li>Playsuits</li>
+                <li>Bottoms</li>
+                <li>Tops</li>
+            </div>
+            <div className='Hoverdiv3'>
+                <li style={{ fontWeight: "bold" }}>By Collection</li>
+                <li>New Arrivals</li>
+                <li>Best Selling</li>
+                <li>Our favorites</li>
+            </div>
+        </div> : ""}
         </div>
     </>
 }

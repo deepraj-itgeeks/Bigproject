@@ -18,23 +18,32 @@ export default function Section1() {
     }
     return <>
 
-        <div className='section1' onClick={()=>{Arrivals()}}>
+        <div className='section1' onClick={() => { Arrivals() }}>
             <div className='firsthe'>
                 <div className='image1'>
-                    <h5>NEW ARRIVALS</h5>
-                    <p>EXPLORE</p>
+                    <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-one.jpg?v=1643320722&width=500' style={{ height: "100%", width: "100%" }} />
+                    <div className='section1heading1 overlay'>
+                        <h5>NEW ARRIVALS</h5>
+                        <p>EXPLORE</p>
+                    </div>
                 </div>
             </div>
-            <div className='secondhe' onClick={()=>Soiree()}>
+            <div className='secondhe' onClick={() => Soiree()}>
                 <div className='image2'>
-                    <h5>SOIREE READY</h5>
-                    <p>EXPLORE</p>
+                    <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-three.jpg?v=1643320740&width=500' style={{ height: "100%", width: "100%" }} />
+                    <div className='section1heading2 overlay'>
+                        <h5>SOIREE READY</h5>
+                        <p>EXPLORE</p>
+                    </div>
                 </div>
             </div>
-            <div className='thirdhe' onClick={()=>Accessories()}>
+            <div className='thirdhe' onClick={() => Accessories()}>
                 <div className='image3'>
-                    <h5>ACCESSORIES</h5>
-                    <p>EXPLORE</p>
+                    <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-two.jpg?v=1643320766&width=500' style={{ height: "100%", width: "100%" }} />
+                    <div className='section1heading3 overlay'>
+                        <h5>ACCESSORIES</h5>
+                        <p>EXPLORE</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -172,26 +172,24 @@
     color: black;
 }
 
-.slider {
-    height: 600px;
-    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/hero_slide_1.jpg?v=1620067690&width=1200");
-    background-repeat: no-repeat;
-    background-size: cover;
+.carousel-item.active {
     display: flex;
+    position: relative;
+    height: fit-content;
     flex-direction: column;
-    color: white;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin-top: -20px;
 }
 
-.slider:hover {
-    cursor: pointer;
-    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/Slide___secondary.jpg?v=1643325390&width=1200');
-    background-repeat: no-repeat;
-    background-size: cover;
+.slideheaddiv {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
+
 
 .active {
     height: 600px;
@@ -224,23 +222,21 @@
 
 .firsthe {
     width: 32%;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .secondhe {
     width: 32%;
     overflow: hidden;
+    position: relative;
 }
 
 .thirdhe {
     width: 32%;
-    overflow: hidden;
 }
 
 .image1 {
-    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-one.jpg?v=1643320722&width=500");
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     width: 100%;
     height: 300px;
@@ -248,18 +244,37 @@
     justify-content: center;
     align-items: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.image1 img{
     transition: transform .8s;
 }
 
-.image1:hover {
-    cursor: pointer;
+.image1 img:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
+.overlay{
+    position: absolute; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.08); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    opacity: 1;
+}
 .image2 {
-    background-image: url('https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-three.jpg?v=1643320740&width=500');
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 300px;
     color: white;
@@ -267,18 +282,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image2 img{
     transition: transform .8s;
 }
 
-.image2:hover {
-    cursor: pointer;
+.image2 img:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .image3 {
-    background-image: url("https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-two.jpg?v=1643320766&width=500");
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 300px;
     color: white;
@@ -286,13 +303,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform .8s;
-
+    position: relative;
+    overflow: hidden;
 }
 
-.image3:hover {
-    cursor: pointer;
+.image3 img{
+    transition: transform .8s;
+}
+
+.image3 img:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .newlook {
@@ -381,6 +402,21 @@
     color: white;
 }
 
+
+.carouselfirst{
+    position: relative;
+    
+}
+
+.carouselsecond{
+    position: relative;
+}
+
+.slideheaddiv{
+    position: absolute;
+    translate: 500px 300px 300px;
+}
+
 .new-looks-carousel-area {
     width: 100%;
     height: fit-content;
@@ -390,7 +426,7 @@
     display: flex;
     flex-direction: column;
     width: 290px;
-    margin-left: 15px;
+    margin-left: 25px;
     cursor: pointer;
     position: relative;
 }
@@ -1289,6 +1325,19 @@
     padding-left: 20px;
 }
 
+.section1heading1{
+    position: absolute;
+}
+
+.section1heading2{
+    position: absolute;
+}
+
+.section1heading3{
+    position: absolute;
+}
+
+
 @keyframes mainparents {
     from {
         opacity: 0.1;
@@ -1331,6 +1380,10 @@
         gap: 120px;
     }
 
+    .slideheaddiv{
+        translate: 300px 100px 100px;
+    }
+
     .NavigationBar {
         gap: 70px;
     }
@@ -1371,7 +1424,7 @@
         justify-content: space-between;
     }
 
-    .section3{
+    .section3 {
         height: 400px;
     }
 
@@ -1455,31 +1508,35 @@
         margin-top: 70px;
     }
 
-    .inspiredinner{
+    .slideheaddiv{
+        translate: 300px 100px 100px;
+    }
+
+    .inspiredinner {
         display: flex;
         font-size: 20px;
     }
 
-    .section3{
-       height: 300px;
-       padding-right: 30px;
+    .section3 {
+        height: 300px;
+        padding-right: 30px;
     }
 
-    .section3div1{
+    .section3div1 {
         height: 250px;
     }
 
-    .section3div2{
+    .section3div2 {
         height: 40px;
         font-size: 15px;
     }
 
-    .shopbycollectioninner{
+    .shopbycollectioninner {
         display: flex;
         font-size: 20px;
     }
 
-    .bestsellinginner{
+    .bestsellinginner {
         display: flex;
         font-size: 20px;
     }
@@ -1691,17 +1748,17 @@
         width: 100%;
     }
 
-    .inspiredinner{
+    .inspiredinner {
         display: flex;
         font-size: 20px;
     }
 
-    .shopbycollectioninner{
+    .shopbycollectioninner {
         display: flex;
         font-size: 20px;
     }
 
-    .bestsellinginner{
+    .bestsellinginner {
         display: flex;
         font-size: 20px;
     }
@@ -1803,17 +1860,17 @@
         margin-top: 550px;
     }
 
-    .inspiredinner{
+    .inspiredinner {
         display: flex;
         font-size: 20px;
     }
 
-    .shopbycollectioninner{
+    .shopbycollectioninner {
         display: flex;
         font-size: 20px;
     }
 
-    .bestsellinginner{
+    .bestsellinginner {
         display: flex;
         font-size: 20px;
     }
@@ -1833,22 +1890,26 @@
         width: 100%;
     }
 
-    .inspiredinner{
+    .slideheaddiv{
+        translate: 100px 50px 50px;
+    }
+
+    .inspiredinner {
         display: flex;
         font-size: 20px;
     }
 
-    .shopbycollectioninner{
+    .shopbycollectioninner {
         display: flex;
         font-size: 20px;
     }
 
-    .bestsellinginner{
+    .bestsellinginner {
         display: flex;
         font-size: 20px;
     }
 
-    .section4para{
+    .section4para {
         font-size: 11px;
     }
 
@@ -2194,18 +2255,18 @@
         width: 100%;
     }
 
-    .section4 h2{
+    .section4 h2 {
         font-size: 18px;
     }
 
-    .section4para{
+    .section4para {
         width: 100%;
         display: flex;
         justify-content: center;
         font-size: 7px;
     }
 
-   
+
 
     .first {
         display: none;
@@ -2535,51 +2596,51 @@
         margin-top: 550px;
     }
 
-    .div2first{
+    .div2first {
         display: flex;
         gap: 10px;
     }
 
-    .selectoption{
+    .selectoption {
         padding: 10px;
     }
 
-    .div2firstleft{
+    .div2firstleft {
         width: 50%;
     }
 
-    .div2firstright{
+    .div2firstright {
         width: 50%;
     }
 
-    .div2second{
+    .div2second {
         display: flex;
         gap: 10px;
     }
 
-    .selectoption1{
+    .selectoption1 {
         padding: 10px;
     }
 
-    .div2secondleft{
+    .div2secondleft {
         width: 50%;
     }
 
-    .div2secondright{
+    .div2secondright {
         width: 50%;
     }
 
-    .inspiredinner{
+    .inspiredinner {
         display: flex;
         font-size: 20px;
     }
 
-    .shopbycollectioninner{
+    .shopbycollectioninner {
         display: flex;
         font-size: 20px;
     }
 
-    .bestsellinginner{
+    .bestsellinginner {
         display: flex;
         font-size: 20px;
     }
