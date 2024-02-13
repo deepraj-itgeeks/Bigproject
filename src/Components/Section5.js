@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Navigation } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom'
 export default function Section5() {
    const [open, setOpen] = useState(false);
    const [active, setActive] = useState(1)
@@ -17,6 +18,9 @@ export default function Section5() {
    const [image2, setImage2] = useState()
 
    const [addition,setAddition] = useState(1)
+
+
+   const navigate = useNavigate()
 
    const OpenModal = () => {
       setOpen(true)
@@ -73,11 +77,21 @@ export default function Section5() {
    }
 
    const Substract =()=>{
-        setAddition(addition - 1)
+        if(addition <=0)
+        {
+         setAddition(addition)
+        }
+        else{
+         setAddition(addition - 1)
+        }
    }
 
    const Additon =()=>{
       setAddition(addition + 1)
+   }
+
+   const OpenDetail = ()=>{
+      navigate('/opencard')
    }
    return <>
       <div className='section5'>
@@ -91,7 +105,7 @@ export default function Section5() {
                   <span style={{ fontWeight: "bold" }}>Stella Top</span>
                   <span>$59.95</span>
                   <button className='selectoption' onClick={OpenModal}>Select options</button>
-                  <button className='details'>Details</button>
+                  <button className='details' onClick={OpenDetail}>Details</button>
                </div>
             </div>
             <hr />
@@ -104,7 +118,7 @@ export default function Section5() {
                      <span><strike>$79.95</strike></span>
                   </span>
                   <button className='selectoption1' onClick={OpenModal2}>Select options</button>
-                  <button className='details1'>Details</button>
+                  <button className='details1' onClick={OpenDetail}>Details</button>
                </div>
             </div>
          </div>

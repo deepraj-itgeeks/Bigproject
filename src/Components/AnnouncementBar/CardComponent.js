@@ -14,6 +14,9 @@ import { ReactComponent as Cross } from '../Svgs/Cross.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import toast, { Toaster } from 'react-hot-toast';
+import "react-toastify/dist/ReactToastify.css";
+
 
 // import required modules
 import { Navigation } from 'swiper/modules';
@@ -79,11 +82,20 @@ export default function CardComponent() {
 
     };
 
+    
     const Cards = (data) => {
         localStorage.setItem("ApiData", JSON.stringify(data))
         const tempdata = (JSON.parse(localStorage.getItem("DataApi"))) ? JSON.parse(localStorage.getItem("DataApi")) : []
         const temp = [...tempdata];
-        temp.push(data)
+        const prevData = JSON.parse(localStorage.getItem("DataApi"));
+        const bool = prevData.filter((itms,index)=>itms.id === data.id)
+        if(!bool[0]){
+            temp.push(data)
+
+        }else{
+            toast.success("Data Already Selected")
+
+        }
         localStorage.setItem("DataApi", JSON.stringify(temp))
         // setGoValue(temp)
         // localStorage.setItem("ApiData",JSON.stringify(data))
