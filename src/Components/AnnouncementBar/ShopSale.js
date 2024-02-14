@@ -252,7 +252,7 @@ const ShopSale = ()=>{
             <div className='arrivaldiv5right'>
                <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash___vanessa-serpas-U0m4t8tD8Sk-unsplashjpg.jpg?v=1629222503&width=700'/>
                 <span className='rightspan'>
-                    <h4>Dresses</h4>
+                    <h4>ACCESSORIS</h4>
                     <button className='arrivalshopnow' onClick={()=>{GoShop()}}>Shop Now</button>
                 </span>
             </div>

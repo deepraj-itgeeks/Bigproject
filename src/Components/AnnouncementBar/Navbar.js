@@ -43,6 +43,8 @@ export default function Navbar() {
     const Home = ()=>{
         navigate('/')
     }
+
+    
     return <>
         <div className='NavigationBar'>
             <span className='span5'>
