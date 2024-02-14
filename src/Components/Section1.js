@@ -22,7 +22,7 @@ export default function Section1() {
             <div className='firsthe'>
                 <div className='image1'>
                     <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/gallery__image-one.jpg?v=1643320722&width=500' style={{ height: "100%", width: "100%" }} />
-                    <div className='section1heading1 overlay'>
+                    <div className='section1heading1 s'>
                         <h5>NEW ARRIVALS</h5>
                         <p>EXPLORE</p>
                     </div>

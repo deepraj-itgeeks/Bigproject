@@ -9,6 +9,7 @@ import '../AnnouncementBar/ArrivalsComponent2.css'
 import Products from '../Products.json'
 import { Checkbox } from '@mui/material';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export default function ArrivalsComponent() {
     const [products, setProducts] = useState([])
     const [isChange, setIsChange] = useState([])
@@ -20,6 +21,8 @@ export default function ArrivalsComponent() {
 
     const [range1,setRange1] = useState(0)
     const [range2,setRange2] = useState(90)
+
+    const navigate = useNavigate('')
 
 
     const HandleMouseOver = (index) => {
@@ -75,20 +78,36 @@ export default function ArrivalsComponent() {
        setRange2(event.target.value)
    }
 
+   const GOArrival = ()=>{
+    navigate('/ArrivalsComponent')
+}
+
+const GoArrival2 = ()=>{
+    navigate('/ArrivalsComponent2')
+}
+
+const GoShop = ()=>{
+    navigate('/shopsale')
+}
+
+const ShopSale = ()=>{
+    navigate('/shopsale')
+}
+
     return <>
         <TopAnnouncementBar />
 
         <Navbar />
 
         <div className='arrivaldiv1'>
-            Dresses
+            <span>Dresses</span>
         </div>
 
         <div className='arrivaldiv2'>
             <div className='arrivaldiv2inner'>
                 <h3 style={{ color: "#AF0000" }}>SALE now on</h3>
                 <p style={{ color: "#AF0000" }}>Shop our mid Season sale for a range of discounted items</p>
-                <button className='shopsale'>Shop Sale</button>
+                <button className='shopsale' onClick={()=>{ShopSale()}}>Shop Sale</button>
             </div>
         </div>
 
@@ -220,21 +239,21 @@ export default function ArrivalsComponent() {
                 <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash___tamara-bellis-0C2qrwkR1dI-unsplash.jpg?v=1629224016&width=800' style={{ maxWidth: "100%" }} />
                 <span className='leftspan'>
                     <h4>NEW ARRIVALS</h4>
-                    <button className='arrivalshopnow'>Shop Now</button>
+                    <button className='arrivalshopnow' onClick={()=>{GOArrival()}}>Shop Now</button>
                 </span>
             </div>
             <div className='arrivaldiv5center'>
                 <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash__jonathan-borba-XJt51hAa3z8-unsplash.jpg?v=1629222523&width=700' />
                 <span className='centerspan'>
                     <h4>Dresses</h4>
-                    <button className='arrivalshopnow'>Shop Now</button>
+                    <button className='arrivalshopnow' onClick={()=>{GoArrival2()}}>Shop Now</button>
                 </span>
             </div>
             <div className='arrivaldiv5right'>
                <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash___vanessa-serpas-U0m4t8tD8Sk-unsplashjpg.jpg?v=1629222503&width=700'/>
                 <span className='rightspan'>
                     <h4>Dresses</h4>
-                    <button className='arrivalshopnow'>Shop Now</button>
+                    <button className='arrivalshopnow' onClick={()=>{GoShop()}}>Shop Now</button>
                 </span>
             </div>
         </div><br />
