@@ -236,6 +236,19 @@ export default function OpenCards() {
         setDetail3(false)
     }
     // console.log(localdata)
+
+
+    const GOArrival = ()=>{
+        navigate('/ArrivalsComponent')
+    }
+
+    const GoArrival2 = ()=>{
+        navigate('/ArrivalsComponent2')
+    }
+
+    const GoShop = ()=>{
+        navigate('/shopsale')
+    }
     return <>
 
         <TopAnnouncementBar />
@@ -485,21 +498,21 @@ export default function OpenCards() {
                 <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash___tamara-bellis-0C2qrwkR1dI-unsplash.jpg?v=1629224016&width=800' style={{ maxWidth: "100%" }} />
                 <span className='leftspan'>
                     <h4>NEW ARRIVALS</h4>
-                    <button className='arrivalshopnow'>Shop Now</button>
+                    <button className='arrivalshopnow' onClick={()=>{GOArrival()}}>Shop Now</button>
                 </span>
             </div>
             <div className='arrivaldiv5center'>
                 <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash__jonathan-borba-XJt51hAa3z8-unsplash.jpg?v=1629222523&width=700' />
                 <span className='centerspan'>
                     <h4>Dresses</h4>
-                    <button className='arrivalshopnow'>Shop Now</button>
+                    <button className='arrivalshopnow' onClick={()=>{GoArrival2()}}>Shop Now</button>
                 </span>
             </div>
             <div className='arrivaldiv5right'>
                 <img src='https://fashionopolism-secret-sale.myshopify.com/cdn/shop/files/fash___vanessa-serpas-U0m4t8tD8Sk-unsplashjpg.jpg?v=1629222503&width=700' />
                 <span className='rightspan'>
                     <h4>Dresses</h4>
-                    <button className='arrivalshopnow'>Shop Now</button>
+                    <button className='arrivalshopnow' onClick={()=>{GoShop()}}>Shop Now</button>
                 </span>
             </div>
         </div><br />
