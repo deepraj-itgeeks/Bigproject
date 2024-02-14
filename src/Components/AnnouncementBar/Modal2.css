@@ -56,14 +56,22 @@
   }
 
   .swiper-button-next::after {
-    color: aqua;
+    color: white;
     --swiper-navigation-size: 12px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
 
 }
 
 .swiper-button-prev::after {
-    color: aqua;
+    color: white;
     --swiper-navigation-size: 12px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .secondmodalspan1{

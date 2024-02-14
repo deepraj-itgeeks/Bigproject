@@ -165,16 +165,16 @@ export default function Account() {
 
         toast.success("Email Successfully Matched")
 
-        // const api = await fetch("http://localhost:5000/forgot-password",{
-        //     method:"POST",
-        //     headers:{
-        //         "Content-type":"application/json"
-        //     },
-        //     body:JSON.stringify({email})
-        // })
+        const api = await fetch("http://localhost:5000/forgot-password",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify({email})
+        })
 
-        // const response = await api.json()
-        // console.log(response)
+        const response = await api.json()
+        console.log(response)
 
     }
 
@@ -349,9 +349,20 @@ export default function Account() {
         setResetConfirmPassValue(value)
     }
 
-    const GOToLogin = ()=>{
+    const GOToLogin = async ()=>{
         setModal3(false)
         setResetPassword(false)
+        toast.success("Password Reset Successfully")
+        const api = await fetch("http://localhost:5000/reset-password",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify({email})
+        })
+
+        const response = await api.json()
+        console.log(response)
     }
 
     const Create = () => {
@@ -501,6 +512,7 @@ export default function Account() {
 
                 <div className='resetdiv5'>
                     {resetemailvalue == "" || resetemailvalue == null || resetotpvalue == "" || resetotpvalue == null || resetpasswordvalue == "" || resetpasswordvalue == null || resetconfirmpassvalue == "" || resetconfirmpassvalue == null || resetpasswordvalue != resetconfirmpassvalue? <button disabled={true} style={{backgroundColor:"gray"}} className='submit'>Submit</button> : <button className='submit' onClick={GOToLogin}>Submit</button>}
+                    <Toaster/>
                 </div>
             </div>
         </Modal>
