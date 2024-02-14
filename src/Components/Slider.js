@@ -28,7 +28,7 @@ export default function Slider() {
           <div className='slideheaddiv overlay1' >
             <h2 className='stepintosummer'>STEP INTO SUMMER</h2>
             <p className='alook'>A LOOK AT OUR FRESHEST FINDS</p>
-            <button className='button1' onClick={GOShop}>SHOP SUMMER</button>
+            <button className='button1' onClick={GOShop}><span>SHOP SUMMER</span></button>
           </div>
         </div>
       </div>

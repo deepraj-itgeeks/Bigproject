@@ -8,6 +8,7 @@ import { TextField, textFieldClasses } from '@mui/material';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { ContainData3 } from '../Redux/MasterSlice';
+import toast, { Toaster } from 'react-hot-toast';
 export default function Contact() {
 
   const { Data3 } = useSelector((store) => store.masterData)
@@ -126,7 +127,7 @@ export default function Contact() {
 
   const Send = () => {
     setDetail((detail) => ({ ...detail, username, useremail, userphone, usermessage }))
-    alert("Your Detail Successfully Send")
+    toast.success("Your Detail Successfully Send")
   }
 
   useEffect(() => {
@@ -199,5 +200,6 @@ export default function Contact() {
     <Section9 />
 
     <Section10 />
+    <Toaster/>
   </>
 }
